@@ -1,0 +1,139 @@
+.page-profile {
+    .card-profile {
+        margin-top: 60px;
+        .profile-picture {
+            margin: auto;
+            position: relative;
+            border-radius: 100px;
+            width: 96px;
+            height: 96px;
+            margin-top: calc( #{$spacer * -3} - 20px );
+        }
+    }
+}
+
+.nav-top-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #f01414;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: bold;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    justify-content: space-between;
+
+    .header-back {
+        display: flex;
+        color: #FFFFFF;
+        align-items: center;
+
+        i {
+            cursor: pointer;
+            content: url(../../images/ic-arrow-left.svg);
+            margin: 1.3em;
+        }
+    }
+
+    .checklist-red-head {
+        margin: 0.3em;
+        width: 32px;
+        height: 32px;
+        background: #FFFFFF;
+        border-radius: 12px;
+        float: right;
+        background-image: url(../../images/ic-red-checklist.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+
+}
+
+.card-profile
+
+.profile-body {
+    background-color: #E5E5E5;
+    padding-top: 80px;
+    position: relative;
+
+    .up {
+        height: 80px;
+        padding: 32px 24px;
+
+        img {
+            cursor: pointer;
+            float: right;
+        }
+    }
+
+    
+
+    .profile-content {
+        background-color: white;
+        left: 0px;
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.04);
+        border-radius: 16px;
+        padding: 56px 24px;
+
+        .detail-row-view {
+            input[type="text"] {
+                padding-left: 8px;
+                background: transparent;
+                overflow: visible;
+                border: 0;
+            }
+
+            input[type="password"] {
+                background: #F8F8F8;
+                padding-left: 8px;
+                background: transparent;
+                overflow: visible;
+                border: 0;
+            }
+
+            input[type="date"] .form-control {
+                background-color: #F8F8F8;
+            }
+
+            select .form-control {
+                background-color: #F8F8F8;
+
+            }
+
+
+
+
+            #picture-attachment-input {
+                background: #F8F8F8;
+            }
+
+            p {
+                text-align: right;
+                font-size: 10px;
+            }
+
+            .upload-file {
+                text-align: right;
+                font-weight: bold;
+                color: #444444;
+            }
+        }
+    }
+}
+
+.up {
+    height: 80px;
+    padding: 32px 24px;
+
+    img {
+        cursor: pointer;
+        float: right;
+    }
+}

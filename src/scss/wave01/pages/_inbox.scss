@@ -1,0 +1,187 @@
+.inbox {
+  &-filter {
+    margin: 5em 1em;
+  }
+
+  .inbox-card {
+    cursor: pointer;
+
+    .card-header {
+      padding-left: 0;
+      padding-right: 0;
+      background: $white;
+
+      .inbox-header {
+        padding-left: $spacer;
+        padding-right: $spacer;
+        position: relative;
+
+        &:before {
+          content: "";
+          display: block-block;
+          width: 5px;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
+        &-sales_order {
+          &:before {
+            background-color: #27ae60;
+          }
+        }
+
+        &-order_split {
+          &:before {
+            background-color: #eb5757;
+          }
+        }
+
+        &-faktur {
+          &:before {
+            background-color: #bb6bd9;
+          }
+        }
+
+        &-pdi {
+          &:before {
+            background-color: #f2994a;
+          }
+        }
+
+        &-event {
+          &:before {
+            background-color: #4f4f4f;
+          }
+        }
+
+        &-purchase_order {
+          &:before {
+            background-color: #f2c94c;
+          }
+        }
+
+        &-assignment_letter {
+          &:before {
+            background-color: #56ccf2;
+          }
+        }
+
+        &-print_gate {
+          &:before {
+            background-color: #9b51e0;
+          }
+        }
+
+        &-stock_opname {
+          &:before {
+            background-color: #bdbdbd;
+          }
+        }
+
+        &-stock_adjustment {
+          &:before {
+            background-color: #bdbdbd;
+          }
+        }
+
+        &-sales_order_invoice {
+          &:before {
+            background-color: #27AE60;
+          }
+        }
+
+        &-sales_order_invoice_return {
+          &:before {
+            background-color: #27AE60;
+          }
+        }
+
+        &-pdi_receipt {
+          &:before {
+            background-color: #F2994A;
+            ;
+          }
+        }
+
+        &-work_order {
+          &:before {
+            background-color: #27AE60;
+          }
+        }
+
+        &-work_order_invoice {
+          &:before {
+            background-color: #27AE60;
+          }
+        }
+
+        &-work_order_invoice_return {
+          &:before {
+            background-color: #27AE60;
+          }
+        }
+
+        &-print_gate_pass {
+          &:before {
+            background-color: #9B51E0;
+          }
+        }
+
+        &-agreement_service {
+          &:before {
+            background-color: #2F80ED;
+          }
+        }
+
+        &-agreement_spare_parts {
+          &:before {
+            background-color: #2F80ED;
+          }
+		}
+		
+		&-is_read {
+		  &:before {
+			background-color: #c4c4c4;
+		  }
+		}
+
+        .inbox-header-title {
+          font-weight: bold;
+          color: $gray-900;
+        }
+
+        .inbox-header-category {
+          margin-bottom: 0;
+          color: $gray-900;
+        }
+      }
+
+      .inbox-date {
+        margin-top: $spacer * .5;
+      }
+    }
+
+    .card-body {
+      table {
+        table-layout: auto;
+
+        th {
+          font-weight: normal;
+          text-align: right;
+          width: 1px;
+          white-space: nowrap;
+          padding: 0;
+          padding-right: $spacer * .5;
+        }
+
+        td {
+          color: $gray-900;
+          padding: 0;
+          padding-left: $spacer * .5;
+        }
+      }
+    }
+  }
+}

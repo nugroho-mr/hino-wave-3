@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Hino Wave 3 - Dealer</title>
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/assets/vendor/boxicons/css/boxicons.min.css">
+</head>
+<body class="w3 auth dealer has-topbar">
+    
+    
+    <div id="topbar" class="bg-hino-red py-4">
+        <div class="container">
+            <div class="row text-white">
+                <div class="col-6 col-left d-flex align-items-center">
+                    <button><box-icon name="left-arrow-alt" color="#ffffff"></box-icon></button>
+                    <h5 class="ml-1 mb-0">Dealer</h5>
+                </div>
+                <div class="col-6 col-right">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<section id="section__dealer-search-form" class="py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card dealer-search-box mb-2">
+                    <div class="card-body py-0">
+                        <div class="d-flex align-items-center">
+                            <div class="col p-0">
+                                <input type="text" class="search-box" placeholder="Search" >
+                            </div>
+                            <div class="col-auto p-0">
+                                <box-icon name="search" size="24px" color="#444444" class="d-block"></box-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-group mb-2">
+                    <select class="form-control select-control">
+                        <option value="1">Option 1</option>
+                        <option value="1">Option 1</option>
+                        <option value="1">Option 1</option>
+                        <option value="1">Option 1</option>
+                        <option value="1">Option 1</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-group mb-0">
+                    <select class="form-control select-control">
+                        <option value="1">Option 1</option>
+                        <option value="1">Option 1</option>
+                        <option value="1">Option 1</option>
+                        <option value="1">Option 1</option>
+                        <option value="1">Option 1</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="map" style="height: 400px; width: 100%;"></div>
+
+<div class="container">
+    <div class="select">
+        <select class="form-control select-control">
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+            <option value="4">Option 4</option>
+        </select>
+    </div>
+</div>
+
+
+
+<script>
+    document.addEventListener( 'DOMContentLoaded', function () {
+        let dealers = [
+                {
+                    name: 'PT. Bypassindo Jaya Indah',
+                    lat: -6.1852503,
+                    long: 106.874831,
+                    address: 'Jl. Jend. Achmad Yani Kav. 52 Jakarta',
+                    city: 'Jakarta',
+                    phone: '(021) 4207757',
+                    fax: '(021) 4248615',
+                    service: 'Main Dealer'
+                },
+                {
+                    name: 'PT Hibaindo Armada Motor Cakung',
+                    lat: -6.183166,
+                    long: 106.927962,
+                    address: 'Jl. Bekasi Raya,Jatinegara Kaum, Jakarta Timur, DKI Jakarta, Daerah Khusus Ibukota Jakarta',
+                    city: 'Jakarta Timur',
+                    phone: '-',
+                    fax: '-',
+                    service: 'Main Dealer'
+                },
+                {
+                    name: 'PT. Indomobil Prima Niaga - Jakarta',
+                    lat: -6.1441182,
+                    long: 106.8838333,
+                    address: 'Kompleks Sunter Agung Podomoro Jl. Danau Sunter Selatan Blok DIII No. 55 - 56, Jakarta Utara DKI Jakarta',
+                    city: 'Sunter',
+                    phone: '(021) 6510050, 6505162',
+                    fax: '(021) 65307578',
+                    service: 'Main Dealer'
+                },
+                {
+                    name: 'PT. Indomobil Prima Niaga - Aceh',
+                    lat: 5.5416023,
+                    long: 95.3367786,
+                    address: 'Jl.Soekarno Hatta Gp. Lampeunerut Ujung Blang Kec. Darul Imarah Kab. Aceh Besar Prov Aceh',
+                    city: 'Aceh',
+                    phone: '(0651) 33108',
+                    fax: '(0651) 33221',
+                    service: 'Main Dealer'
+                },
+        ]
+
+        const map = new google.maps.Map(document.getElementById("map"), {
+          center: { lat: -1.5300879, lng: 118.4787664 },
+          zoom: 4,
+        });
+        
+
+        const infoWindowContent = (marker) => {
+            let str = '<div class="marker-info-container>'
+            str += '<div class="marker-info">'
+            str += '<ul class="bx-ul">'
+            str += '<li><i class="bx bx-buildings"></i>' + marker.address + '</li>'
+            str += '<li><i class="bx bx-phone"></i>' + marker.phone + '</li>'
+            str += '<li><i class="bx bx-printer"></bi>' + marker.fax + '</li>'
+            str += '</ul>'
+            str += '</div>'
+            str += '</div>'
+
+            return str
+        } 
+
+        let markers = dealers.map((dealer, i) => {
+            let marker = new google.maps.Marker({
+                map,
+                animation: google.maps.Animation.DROP,
+                position: { lat: dealer.lat, lng: dealer.long },
+                address: dealer.address,
+                city: dealer.city,
+                phone: dealer.phone,
+                fax: dealer.fax,
+                service: dealer.service
+            })
+            let infowindow = new google.maps.InfoWindow({
+                content: infoWindowContent(marker),
+            });
+            google.maps.event.addListener(marker, 'click', () => { 
+                infowindow.open(map, marker);
+            });
+            return marker
+        });
+
+        
+    })
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhXWNjkdtTh71x6PDiDbKfHPVXHawElK8">
+</script>
+
+
+<div class="footer-spacer"></div>
+<div id="floating-footer-menu">
+    <div class="grid-container bg-dark rounded-lg">
+        <!-- class "current" added for current active page -->
+        <div class="grid-item item-home current">
+            <a href="#"><box-icon type="solid" name="home" color="#ffffff" size="1.5rem"></box-icon></a>
+        </div>
+        <div class="grid-item item-event">
+            <a href="#"></a><box-icon name="calendar-event" color="#ffffff" size="1.5rem"></box-icon></a>
+        </div>
+        <!-- class "has-alert" added for icon with unread notification -->
+        <div class="grid-item item-notification has-alert">
+            <a href="#"><box-icon type="solid" name="bell" color="#ffffff" size="1.5rem"></box-icon></a>
+        </div>
+        <div class="grid-item item-profile">
+            <a href="#"><span class="avatar rounded-circle" style="background-image: url('/assets/images/avatar.jpg')"></span></a>
+        </div>
+    </div>
+</div>
+
+    <script src="/assets/vendor/boxicons/js/boxicons.js"></script>
+
+</body>
+</html>

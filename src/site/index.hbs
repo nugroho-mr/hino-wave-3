@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Hino Wave 3 - Table of Content</title>
+        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="initial-scale=1" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <style>
+            .img-logo {
+                height: 60px;
+                width: auto;
+            }
+            .img-logo-heart {
+                height: 60px;
+                width: auto;
+            }
+            
+            @media (min-width: 768px) {
+                .toc {
+                    column-count: 3;
+                    column-gap: 2rem;
+                    column-fill: auto;
+                    min-height: 70vh;
+                    height: 1px;
+                }
+            }
+            @media (min-width: 992px) {
+                .toc {
+                    column-count: 4;
+                }
+            }
+        </style>
+    </head>
+
+    <body class="w3">
+
+        <section class="py-10">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        
+                        <h1 class="text-hino-red font-weight-bold  text-center">Table of Content</h1>
+                        <div class="toc">
+                            <ol class="mt-0 mb-0">
+                                {{#each collections.pages as |page| }}
+                                    <li>
+                                        <a href="{{page.url}}" target="_blank">{{ page.data.title }}</a>
+                                        {{#if (eq page.data.status 'completed') }}
+                                            <span class="badge badge-success">completed</span>
+                                        {{else if (eq page.data.status 'on progress') }}
+                                            <span class="badge badge-warning">on progress</span>
+                                        {{/if}}
+                                    </li>
+                                {{/each }}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </body>
+
+</html>
+
+
+
+    

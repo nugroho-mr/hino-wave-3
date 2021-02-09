@@ -1,0 +1,16 @@
+
+    @import "variables";
+    @import "node_modules/bootstrap/scss/bootstrap";
+
+.w3 {
+    @import 'partials/reset';
+    @import 'partials/default';
+    @import 'partials/floating-footer-menu';
+    @import 'partials/custom-select';
+
+    // Pages
+    @import 'pages/0001-splash-screen';
+    @import 'pages/0200-onboarding';
+    @import 'pages/0300-home';
+    @import 'pages/0500-dealer';
+}

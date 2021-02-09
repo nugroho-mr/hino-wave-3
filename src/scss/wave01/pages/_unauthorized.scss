@@ -1,0 +1,64 @@
+.page-unauthorized {
+    #header, 
+    #main, 
+    #footer {
+        flex-grow: 0;
+    }
+    #header {
+        .logo-hino-wrapper {
+            background: $hino-red;
+            padding: 0.8em 0.5em;
+            display: inline-block;
+            .logo-hino {
+                width: 60px;
+            }
+        }
+    }
+}
+
+
+.unauthorized {
+    &-bg {
+      display: relative;
+      background: $gray-900 url(./../assets/images/bg-splash.png) center no-repeat;
+      background-size: cover;
+      min-height: 100vh;
+    }
+    &-content {
+      margin: 0 20px;
+    }
+    &-logo-hino {
+      background: $hino-red;
+      padding: 0.8em 0.5em;
+      display: block;
+      width: 60px;
+      margin-bottom: 40px;
+    }
+    &-logo-heart {
+      display: block;
+      margin: 35px auto;
+    }
+  }
+  
+  @media (min-width: $breakpoint-phone) {
+    .bg-splash {
+      height: 100%;
+    }
+    .home-banner-body-greet span:nth-child(2) {
+      max-width: 60%;
+    }
+    .hino-fab {
+      position: fixed;
+      bottom: 7em;
+    }
+    .unauthorized {
+      &-bg {
+        height: 100%;
+      }
+      &-content {
+        max-width: $breakpoint-phone;
+        margin: auto;
+      }
+    }
+  }
+  

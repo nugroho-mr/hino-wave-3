@@ -1,0 +1,129 @@
+@import "unitconversion";
+@import "variables";
+@import "node_modules/bootstrap/scss/bootstrap";
+//@import "ember-power-calendar";
+@import "component";
+
+@import "partials/side-menu";
+
+@import "pages/unauthorized";
+@import "pages/authorized";
+@import "pages/home";
+@import "pages/dashboard";
+@import "pages/dms-outstanding-trx";
+@import "pages/inbox";
+@import "pages/profile";
+@import "pages/item-inquiry";
+@import "pages/notifications";
+@import "pages/account";
+
+@import "default";
+@import "datepicker";
+@import "tabs";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+  color: theme-color("gray2");
+}
+
+.xdsoft_datepicker {
+  width: 200px !important;
+  font-size: 12px !important;
+}
+
+.xdsoft_monthpicker {
+  font-size: 12px !important;
+}
+
+.xdsoft_monthpicker .xdsoft_month {
+ width: 81px !important;
+}
+
+.xdsoft_datetimepicker .xdsoft_month {
+  width: 81px !important;
+}
+
+.xdsoft_monthpicker .xdsoft_label  {
+  font-size: 12px !important;
+}
+
+.xdsoft_datetimepicker .xdsoft_label {
+  font-size: 12px !important;
+}
+
+@media (min-width: $breakpoint-phone) {
+
+  /*.nav-top,
+  .nav-top-close,
+  .nav-top-gen,
+  .nav-top-item {
+    max-width: $breakpoint-phone;
+  }*/
+
+  .home-banner-body-greet span:nth-child(2) {
+    max-width: 60%;
+  }
+  
+}
+
+@media (min-height: 495px) {
+  .vh-sm-100 {
+      height: 100vh !important;
+  }
+}
+
+/*
+Finally we jus focus on mobile view
+I comment this, to prepare if something change in the future
+May be I will delete it, in next 2 weeks
+*/
+
+// @media (min-width: $breakpoint-tablet) {
+//   body {
+//     background-color: #f8f8f8;
+//   }
+
+//   #root {
+//     width: 100%;
+
+//     .home-banner {
+//       margin: 0 $margin-desktop;
+//     }
+
+//     .m-4 {
+//       width: 320px;
+//       margin-left: auto;
+//       margin-right: auto;
+//       max-width: calc(100vh - 40px);
+//     }
+
+//     .home-body {
+//       margin: 25px $margin-desktop 80px $margin-desktop;
+//     }
+
+//     .bottom-menu {
+//       position: fixed;
+//       max-width: calc(100vw - 280px);
+//     }
+
+//     .hino-card {
+//       .hino-container {
+//         padding: 0 $margin-desktop;
+//       }
+//     }
+
+//     .card-grid {
+//       padding: 0 $margin-desktop;
+//     }
+//   }
+
+//   .mt-2 {
+//     .hino-card {
+//       width: 100%;
+//     }
+//   }
+// }
+//@import "ember-content-placeholders";

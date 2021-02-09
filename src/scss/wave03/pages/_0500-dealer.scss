@@ -1,0 +1,17 @@
+&.dealer {
+    .dealer-search-box {
+        .search-box {
+            border: 0;
+            outline: 0;
+            box-shadow: 0;
+            width: 100%;
+            height: 3rem;
+            line-height: 3rem;
+            padding: 0;
+
+        }
+        @include media-breakpoint-up(md) {
+            margin-top: 2rem;
+        }
+    }
+}

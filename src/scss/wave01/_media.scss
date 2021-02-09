@@ -1,0 +1,26 @@
+@media (min-width: $breakpoint-phone) {
+  .bg-splash {
+    height: 100%;
+  }
+  .home-banner-body-greet span:nth-child(2) {
+    max-width: 60%;
+  }
+  .hino-fab {
+    position: fixed;
+    bottom: 20px;
+  }
+  .unauthorized {
+    &-bg {
+      height: 100%;
+    }
+    &-content {
+      max-width: $breakpoint-phone;
+      margin: auto;
+    }
+  }
+  .btn-float {
+    position: fixed;
+    bottom: 50px;
+    width: 25vw;
+  }
+}

@@ -1,0 +1,92 @@
+.page-dashboard {
+  .chart__legend-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .funnel__container {
+    background-color: #393862;
+    height: 65vw;
+    .funnel {
+      height: 100%;
+      width: 100%;
+      .svg-funnel-js__label {
+        padding-left: 10px;
+        padding-right: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .label__value {
+          font-size: $spacer;
+          margin-bottom: 0;
+          order: 3;
+        }
+        .label__title {
+          color: $white;
+          order: 2;
+        }
+        .label__percentage {
+          color: $white;
+          order: 1;
+        }
+      }
+    }
+    @include media-breakpoint-up(sm) {
+      height: 280px;
+    }
+    @include media-breakpoint-up(lg) {
+      height: 330px;
+    }
+  }
+  #dashboard__percentage {
+    .percentage-bar {
+      &:last-child {
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+      }
+    }
+  }
+  #dashboard__info{
+    .dashboard__info__card-container {
+      padding-top: 100%;
+      .dashboard__info__card {
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: 0;
+        height: 100%;
+        .card-header {
+          padding: 0.5rem;
+          padding-bottom: 0;
+        }
+        .card-body {
+          padding: 0 0.5rem;
+          background: $white;
+          h1 {
+            font-size: 48px;
+          }
+        }
+        .total-transaction {
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+        }
+      }
+    }
+  }
+  #dashboard__almost-expired-trans {
+    .total-transaction {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+  #om__unit-sales,
+  #om__part-sales,
+  #om__active-agreements {
+    .chart__legend-icon {
+      width: 10px;
+      height: 10px;
+    }
+  }
+}

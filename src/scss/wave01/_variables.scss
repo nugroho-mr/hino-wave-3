@@ -1,0 +1,120 @@
+// HINO VARIABLES
+
+$slow-transition: 1s;
+$medium-transition: 0.5s;
+$fast-transition: 0.3s;
+
+// BOOTSTRAP VARIABLES
+
+// Color system
+
+$hino-red: #F01414 !default;
+$hino-red-medium: #e60d2e !default;
+$hino-red-darker: #C80000 !default;
+
+
+$white   : #ffffff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #888888 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000000 !default;
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "hino-red":            $hino-red,
+    "hino-red-medium":     $hino-red-medium,
+    "hino-red-darker":     $hino-red-darker,
+    "gray-100":            $gray-100,
+    "gray-200":            $gray-200,
+    "gray-300":            $gray-300,
+    "gray-400":            $gray-400,
+    "gray-500":            $gray-500,
+    "gray-600":            $gray-600,
+    "gray-700":            $gray-700,
+    "gray-800":            $gray-800,
+    "gray-900":            $gray-900,
+    "black":               $black    
+  ),
+  $theme-colors
+);
+
+
+// Spacing
+$spacer: 1rem;
+
+$spacers: () !default;
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: ($spacer * .75),
+    4: $spacer,
+    5: ($spacer * 1.25),
+    6: ($spacer * 1.5),
+    7: ($spacer * 1.75),
+    8: ($spacer * 2),
+    9: ($spacer * 2.5),
+    10: ($spacer * 3),
+  ),
+  $spacers
+);
+
+// Body
+
+$body-color:                $gray-600 !default;
+
+
+// Typography
+
+$font-family-sans-serif:      Helvetica, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+
+$font-size-base: 0.8rem;
+
+$text-muted:                  $gray-500 !default;
+
+// Buttons
+
+$border-radius:       0.6rem!default;
+$border-radius-lg:    0.8rem !default;
+$border-radius-sm:    0.45rem !default;
+
+
+// Forms
+
+$input-bg:                              darken($gray-100,1%) !default;
+$input-disabled-bg:                     darken($gray-100,5%) !default;
+
+$input-border-width:                    0 !default;
+$input-btn-line-height:       2 !default;
+$input-btn-font-size:       1rem;
+
+$input-btn-focus-width:       .2rem !default;
+$input-btn-focus-color:       lighten($gray-700, 10%) !default;
+$input-btn-focus-box-shadow:  0 0 $input-btn-focus-width $input-btn-focus-color !default;
+
+$form-group-margin-bottom:              1.5rem !default;
+
+$input-placeholder-color:               $gray-500 !default;
+
+//$input-focus-border-color:              red !default;
+//$input-focus-width:                     red !default;
+//$input-focus-box-shadow:                red !default;
+
+
+$breakpoint-tablet: 768px;
+$breakpoint-phone: 30em;
+//$border-radius: 5rem;
+$margin-page: 2em;
+$margin-desktop: 140px;
+
+$hino-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);

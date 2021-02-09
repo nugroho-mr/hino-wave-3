@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Hino Wave 3 - {{ title }}</title>
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/assets/vendor/boxicons/css/boxicons.min.css">
+    {{#if include_splide }}
+        <link rel="stylesheet" href="/assets/vendor/splidejs/css/splide-core.min.css">
+    {{/if}}
+</head>
+<body class="w3 {{ body_classes }} {{#if topbar}}has-topbar{{/if}}">
+    
+    {{{ content }}}
+
+    <script src="/assets/vendor/boxicons/js/boxicons.js"></script>
+    {{#if include_splide }}
+        <script src="/assets/vendor/splidejs/js/splide.min.js"></script>
+    {{/if}}
+
+</body>
+</html>

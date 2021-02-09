@@ -1,0 +1,35 @@
+.scroll {
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    height: 32px;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 10px;
+    max-width: fit-content;
+
+    span {
+        color: white;
+        margin-right: 22px;
+    }
+
+    i {
+        content: url(../../images/ic-up-down.svg);
+    }
+}
+
+.gray-plus {
+    content: url(../../images/ic-gray-plus.svg);
+}
+
+.white-star {
+    margin-left: 10px;
+    margin-bottom: -3px;
+    content: url(../../images/ic-white-star.svg);
+}
+
+.yellow-star {
+    margin-left: 10px;
+    margin-bottom: -3px;
+    content: url(../../images/ic-yellow-star.svg);
+}

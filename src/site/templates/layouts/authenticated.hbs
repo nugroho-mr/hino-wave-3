@@ -1,0 +1,27 @@
+---
+layout: 'layouts/base'
+user: {
+    avatar_image: '/assets/images/avatar.jpg',
+    name: 'Karenina'
+}
+---
+
+{{#if topbar }}
+    <div id="topbar" class="bg-hino-red py-4">
+        <div class="container">
+            <div class="row text-white">
+                <div class="col-6 col-left d-flex align-items-center">
+                    <button><box-icon name="left-arrow-alt" color="#ffffff"></box-icon></button>
+                    <h5 class="ml-1 mb-0">{{ title }}</h5>
+                </div>
+                <div class="col-6 col-right">
+
+                </div>
+            </div>
+        </div>
+    </div>
+{{/if}}
+
+{{{ content }}}
+
+{{> partials/floating-footer-menu }}

@@ -1,0 +1,19 @@
+<div class="footer-spacer"></div>
+<div id="floating-footer-menu">
+    <div class="grid-container bg-dark rounded-lg">
+        <!-- class "current" added for current active page -->
+        <div class="grid-item item-home current">
+            <a href="#"><box-icon type="solid" name="home" color="#ffffff" size="1.5rem"></box-icon></a>
+        </div>
+        <div class="grid-item item-event">
+            <a href="#"></a><box-icon name="calendar-event" color="#ffffff" size="1.5rem"></box-icon></a>
+        </div>
+        <!-- class "has-alert" added for icon with unread notification -->
+        <div class="grid-item item-notification has-alert">
+            <a href="#"><box-icon type="solid" name="bell" color="#ffffff" size="1.5rem"></box-icon></a>
+        </div>
+        <div class="grid-item item-profile">
+            <a href="#"><span class="avatar rounded-circle" style="background-image: url('{{ user.avatar_image }}')"></span></a>
+        </div>
+    </div>
+</div>

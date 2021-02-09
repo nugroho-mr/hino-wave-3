@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Hino Wave 3 - Onboarding</title>
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/assets/vendor/boxicons/css/boxicons.min.css">
+        <link rel="stylesheet" href="/assets/vendor/splidejs/css/splide-core.min.css">
+</head>
+<body class="w3 auth onboarding ">
+    
+    
+<section id="section__main" class="position-relative">
+    <div class="container h-100">
+        <div class="row flex-column h-100">
+			<div class="col px-7">
+				<div class="splide splide--onboarding h-100 d-flex flex-column">
+					<div class="splide__track flex-grow-1">
+						<ul class="splide__list">
+							<li class="splide__slide">
+								<img src="/assets/images/img-onboarding-01.png" class="img-onboarding img-onboarding-01 img-fluid" />
+								<h2>Selamat Datang</h2>
+								<p>di Hino e-Application Regulated Total Support (HEARTS)</p>
+							</li>
+							<li class="splide__slide">
+								<img src="/assets/images/img-onboarding-02.png" class="img-onboarding img-onboarding-02 img-fluid" />
+								<h2>Lengkap</h2>
+								<p>Dapatkan informasi produk, promo, sparepart dan info lainnya tentang HINO Indonesia secara lengkap dan terintegrasi</p>
+							</li>
+							<li class="splide__slide">
+								<img src="/assets/images/img-onboarding-03.png" class="img-onboarding img-onboarding-03 img-fluid" />
+								<h2>Mudah</h2>
+								<p>Kemudahan akses baik secara offline maupun online dalam pencarian database dan transaksi sales</p>
+							</li>
+							<li class="splide__slide">
+								<img src="/assets/images/img-onboarding-04.png" class="img-onboarding img-onboarding-04 img-fluid" />
+								<h2>Mulai!</h2>
+								<p>Capai dan tingkatkan sales target Anda! karena banyak reward point menanti, maju bersama HINO Indonesia</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+	<a href="#" id="link-next" class="align-items-center justify-content-center rounded-circle bg-hino-red position-absolute">
+		<img src="/assets/images/ic-arrow-next.svg" class="ic-arrow-next">
+	</a>
+</section>
+
+
+<script>
+    document.addEventListener( 'DOMContentLoaded', function () {
+		let splideOnboarding = new Splide( '.splide--onboarding', {
+			arrows: false,
+			autoplay: false,
+			keyboard: false,
+			perMove: 1,
+		}).mount()
+		splideOnboarding.on('moved',  (newIndex,oldIndex,destIndex) => {
+			if( newIndex == (splideOnboarding.length - 1) ) {
+				document.getElementById('link-next').classList.add('is-active')
+			} else {
+				document.getElementById('link-next').classList.remove('is-active')
+			}
+		})
+	} );
+</script>
+
+    <script src="/assets/vendor/boxicons/js/boxicons.js"></script>
+        <script src="/assets/vendor/splidejs/js/splide.min.js"></script>
+
+</body>
+</html>
