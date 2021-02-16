@@ -10,11 +10,11 @@ user: {
     <div id="topbar" class="bg-hino-red py-4">
         <div class="container">
             <div class="row text-white">
-                <div class="col-6 col-left d-flex align-items-center">
+                <div class="col-auto col-left d-flex align-items-center">
                     <button><box-icon name="left-arrow-alt" color="#ffffff"></box-icon></button>
-                    <h5 class="ml-1 mb-0">{{ title }}</h5>
+                    <h5 class="ml-1 mb-0">{{#if topbar_title }}{{ topbar_title }}{{else}}{{ title }}{{/if}}</h5>
                 </div>
-                <div class="col-6 col-right">
+                <div class="col col-right">
 
                 </div>
             </div>

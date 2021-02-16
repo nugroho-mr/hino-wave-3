@@ -1,4 +1,5 @@
 const pluginSass = require("eleventy-plugin-sass")
+const jsdom = require("jsdom")
 
 function compare( a, b ) {
     if ( a.last_nom < b.last_nom ){
@@ -22,6 +23,7 @@ module.exports = function(config) {
         "node_modules/boxicons/dist": "assets/vendor/boxicons/js",
         "node_modules/boxicons/css": "assets/vendor/boxicons/css",
         "node_modules/boxicons/fonts": "assets/vendor/boxicons/fonts",
+        "node_modules/lightgallery.js/dist": "assets/vendor/lightgalleryjs",
     })
     config.addCollection('pages', collection => {
         return collection.getFilteredByGlob('src/site/pages/*').sort(function(a, b) {
@@ -40,6 +42,22 @@ module.exports = function(config) {
       } else {
         return false
       }
+    });
+
+    config.addHandlebarsHelper("formatArticle", function(xmlString) {
+      let dom = new jsdom.JSDOM(xmlString)
+      all = dom.window.document.documentElement.querySelector('body').childNodes
+      let str = ''
+    
+      for (i = 0; i < all.length; i++) {
+        all[i].removeAttribute('class')
+        all[i].removeAttribute('style')
+        
+        if( !( all[i].tagName === 'STYLE' || all[i].tagName === 'SCRIPT' )) {
+          str += all[i].outerHTML.replace(/<\/*(font|span)[^>]*(>|$)|&nbsp;|&zwnj;|&raquo;|&laquo;|&gt;/g, "")
+        }
+      }
+      return str
     });
 
     return {

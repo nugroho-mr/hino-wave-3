@@ -12,6 +12,9 @@
     {{#if include_splide }}
         <link rel="stylesheet" href="/assets/vendor/splidejs/css/splide-core.min.css">
     {{/if}}
+    {{#if include_lightgallery }}
+        <link rel="stylesheet" href="/assets/vendor/lightgalleryjs/css/lightgallery.css">
+    {{/if}}
 </head>
 <body class="w3 {{ body_classes }} {{#if topbar}}has-topbar{{/if}}">
     
@@ -20,6 +23,9 @@
     <script src="/assets/vendor/boxicons/js/boxicons.js"></script>
     {{#if include_splide }}
         <script src="/assets/vendor/splidejs/js/splide.min.js"></script>
+    {{/if}}
+    {{#if include_lightgallery }}
+        <link rel="stylesheet" href="/assets/vendor/lightgalleryjs/js/lightgallery.min.js">
     {{/if}}
 
 </body>

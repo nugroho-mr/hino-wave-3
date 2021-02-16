@@ -1,3 +1,8 @@
+html & {
+  height: 100%;
+  background-color: $white;
+}
+
 &.unauth {
     #section__main {
         background: #111111 url('../assets/images/bg-login.png') center no-repeat;
@@ -22,6 +27,11 @@
 
 &.auth {
     #topbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
         button {
             height: $spacer * 1.5;
             border: 0;
@@ -32,6 +42,18 @@
         }
         h5 {
             font-weight: 400;
+        }
+    }
+
+    &.has-topbar {
+        margin-top: $spacer * 3.5;
+    }
+
+    section {
+        & > .container:not(.no-padding),
+        & > .container-fluid:not(.no-padding) {
+            padding-right: $spacer * 1.5;
+            padding-left:  $spacer * 1.5;
         }
     }
 }
@@ -70,5 +92,54 @@
     align-items: center;
     .popup {
         background: $white;
+        .splide--gallery {
+            position: relative;
+            width: 100%;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-bottom: $spacer * 1.5;
+            .splide__arrows {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                z-index: 9;
+                pointer-events: none;
+                display: flex;
+                justify-content: space-between;
+                padding-left: 10px;
+                padding-right: 10px;
+                transform: translateY(-50%);
+                .splide__arrow {
+                    pointer-events: all;
+                    width: 20px;
+                    height: 20px;
+                    background: none;
+                    border: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    &:disabled {
+                        opacity: 0;
+                        pointer-events: none;
+                    }
+                    &.splide__arrow--next {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.search-box {
+    .search-box {
+        border: 0;
+        outline: 0;
+        box-shadow: 0;
+        width: 100%;
+        height: 3rem;
+        line-height: 3rem;
+        padding: 0;
     }
 }

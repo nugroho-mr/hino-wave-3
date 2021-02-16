@@ -13,6 +13,8 @@
     "@splidejs/splide": "^2.4.21",
     "bootstrap": "^4.6.0",
     "boxicons": "^2.0.7",
-    "eleventy-plugin-sass": "^1.1.1"
+    "eleventy-plugin-sass": "^1.1.1",
+    "jsdom": "^16.4.0",
+    "lightgallery.js": "^1.4.0"
   }
 }

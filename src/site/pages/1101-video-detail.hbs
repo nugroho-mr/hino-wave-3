@@ -1,0 +1,123 @@
+---
+layout: 'layouts/authenticated'
+title: 'Video Detail'
+order: 1100
+status: 'on progress'
+body_classes: 'auth video-detail'
+topbar: true
+include_splide: true
+topbar_title: 'Video Detail'
+---
+
+<section id="section__video-search" class="py-4">
+     <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card search-box video--search-box mb-0">
+                    <div class="card-body py-0">
+                        <div class="d-flex align-items-center">
+                            <div class="col p-0">
+                                <input type="text" class="search-box" placeholder="Cari Regulasi Pemerintah" >
+                            </div>
+                            <div class="col-auto p-0">
+                                <box-icon name="search" size="24px" color="#444444" class="d-block"></box-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="section__featured-video" class="py-4 text-dark">
+    <div class="container pr-0 pr-md-6">
+        <div class="row">
+            <div class="col">
+                <h5 class="font-weight-normal">Video Pilihan</h5>
+                <div class="splide splide--featured-video w-100">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+
+    const getVideoDetails = async (videoId, done) => {
+        let requestVideo = new XMLHttpRequest()
+        requestVideo.onload = function () {
+            done(null, requestVideo.response);
+        };
+        requestVideo.onerror = function () {
+            done(requestVideo.response);
+        };
+        //console.log(videoId)
+        requestVideo.open('GET', 'https://youtube.googleapis.com/youtube/v3/videos?part=snippet&part=statistics&id=' + videoId.join('&id=') + '&key={{ googleAPI.APIkey  }}', true);
+        requestVideo.send('');
+
+    }
+
+    document.addEventListener( 'DOMContentLoaded', function () {
+
+        // Populate featured video
+        let requestFeaturedVideo = new XMLHttpRequest()
+        const populateFeaturedVideo = () => {
+            const featuredVideos = JSON.parse(requestFeaturedVideo.responseText)
+            
+            let videoIds = (featuredVideos.items.map(item => item.contentDetails.videoId))
+
+            getVideoDetails(videoIds, (err,resp) => {
+                if (err) { throw err; }
+                let htmlStr = ''
+                const videoList = JSON.parse(resp)
+                console.log(videoList)
+                videoList.items.forEach((video) => {
+                    snippet = video.snippet
+                    stats = video.statistics
+                    htmlStr += '<li class="splide__slide">'
+                    htmlStr += '<div class="card"><div class="card-body p-0>'
+                    htmlStr += '<div class="thumbnail w-100" style="background-image: url(' + snippet.thumbnails.high.url + '); padding-top: 60%;" ></div>'
+                    htmlStr += '<div class="p-4">'
+                    htmlStr += '<h5 class="title">' + snippet.title + '</h5>'
+                    htmlStr += '<p class="description m-0">' + stats.viewCount + ' views</p>'
+                    htmlStr += '</div>'
+                    htmlStr += '</div></div>'
+                    htmlStr += '</li>'
+                })
+                document.querySelector('.splide--featured-video .splide__list').innerHTML += htmlStr
+                let splideFeaturedVideo = new Splide( '.splide--featured-video', {
+                    arrows: false,
+                    navigation: false,
+                    autoplay: false,
+                    keyboard: false,
+                    cover: false,
+                    perMove: 1,
+                    fixedWidth: '80vw',
+                    gap: 15,
+                    pagination: false,
+                }).mount()
+            })
+        }
+        requestFeaturedVideo.onreadystatechange = function() {
+            if(requestFeaturedVideo.readyState < 4) {
+                return;
+            }
+            if(requestFeaturedVideo.status !== 200) {
+                return;
+            }
+            if(requestFeaturedVideo.readyState === 4) {
+                populateFeaturedVideo();
+            }
+        };
+
+        requestFeaturedVideo.open('GET', 'https://youtube.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUaAUoOw0yHozIzd6nCI3vBA&key={{ googleAPI.APIkey  }}', true);
+        requestFeaturedVideo.send('');
+
+    })
+</script>
+

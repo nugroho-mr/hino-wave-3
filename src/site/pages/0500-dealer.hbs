@@ -2,102 +2,16 @@
 layout: 'layouts/authenticated'
 title: 'Dealer'
 order: 500
-status: 'on progress'
+status: 'completed'
 body_classes: 'auth dealer'
 topbar: true
-dealers: [
-    {
-        "dealer_id": "244",
-        "name": "PT. Bypassindo Jaya Indah",
-        "city": "Jakarta",
-        "logo": null,
-        "phone": "(021) 4207757",
-        "fax": "(021) 4248615",
-        "address": "Jl. Jend. Achmad Yani Kav. 52 Jakarta",
-        "latitude": "-6.1852503",
-        "longitude": "106.874831",
-        "created_at": "2019-07-17 10:15:51",
-        "created_by": "1",
-        "updated_at": "2020-09-28 18:27:14",
-        "updated_by": "1",
-        "facebook": "https://www.facebook.com/bypassindojayaindah.hino.7",
-        "youtube": null,
-        "twitter": "https://twitter.com/hino_bypassindo",
-        "instagram": "https://www.instagram.com/explore/locations/1008959979/hino-bypassindo-jaya-indah?hl=de",
-        "website": "https://bjihino.wixsite.com/hino",
-        "service": "Main Dealer"
-    },
-    {
-        "dealer_id": "246",
-        "name": "PT Hibaindo Armada Motor Cakung",
-        "city": "Jakarta Timur",
-        "logo": null,
-        "phone": "-",
-        "fax": "-",
-        "address": "Jl. Bekasi Raya,Jatinegara Kaum, Jakarta Timur, DKI Jakarta, Daerah Khusus Ibukota Jakarta",
-        "latitude": "-6.183166",
-        "longitude": "106.927962",
-        "created_at": "2019-07-17 10:17:58",
-        "created_by": "1",
-        "updated_at": "2020-09-28 18:27:14",
-        "updated_by": "1",
-        "facebook": "https://www.facebook.com/pg/hibaindoarmadamotor/community/?mt_nav=0&msite_tab_async=0",
-        "youtube": null,
-        "twitter": null,
-        "instagram": "https://www.instagram.com/hinohibaindo/?hl=tl",
-        "website": "https://hibautama.com/",
-        "service": "Main Dealer"
-    },
-    {
-        "dealer_id": "247",
-        "name": "PT. Indomobil Prima Niaga - Jakarta",
-        "city": "Sunter",
-        "logo": null,
-        "phone": "(021) 6510050, 6505162",
-        "fax": "(021) 65307578",
-        "address": "Kompleks Sunter Agung Podomoro Jl. Danau Sunter Selatan Blok DIII No. 55 - 56, Jakarta Utara DKI Jakarta",
-        "latitude": "-6.1441182",
-        "longitude": "106.8838333",
-        "created_at": "2019-07-17 10:27:04",
-        "created_by": "1",
-        "updated_at": "2020-09-28 18:27:14",
-        "updated_by": "1",
-        "facebook": "https://www.facebook.com/pages/Pt-Indomobil-Prima-Niaga/165453793516615",
-        "youtube": null,
-        "twitter": null,
-        "instagram": "https://www.instagram.com/indomobil_hino/",
-        "website": "www.hino.indomobil.co.id",
-        "service": "Main Dealer"
-    },
-    {
-        "dealer_id": "248",
-        "name": "PT. Indomobil Prima Niaga - Aceh",
-        "city": "Aceh",
-        "logo": null,
-        "phone": "(0651) 33108",
-        "fax": "(0651) 33221",
-        "address": "Jl.Soekarno Hatta Gp. Lampeunerut Ujung Blang Kec. Darul Imarah Kab. Aceh Besar Prov Aceh",
-        "latitude": "5.5416023",
-        "longitude": "95.3367786",
-        "created_at": "2019-07-17 10:29:04",
-        "created_by": "1",
-        "updated_at": "2020-09-28 18:27:14",
-        "updated_by": "1",
-        "facebook": "https://www.facebook.com/INDOMOBIL-HINO-ACEH-381785422671774/",
-        "youtube": null,
-        "twitter": null,
-        "instagram": "https://www.instagram.com/indomobilhino.aceh/",
-        "website": "www.hinoaceh.com",
-        "service": "Main Dealer"
-    }
-]
 ---
 
 <section id="section__dealer-search-form" class="py-4">
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                <div class="card dealer-search-box mb-2">
+            <div class="col-12 col-md-4">
+                <div class="card search-box dealer--search-box mb-2">
                     <div class="card-body py-0">
                         <div class="d-flex align-items-center">
                             <div class="col p-0">
@@ -110,25 +24,23 @@ dealers: [
                     </div>
                 </div>
             </div>
-            <div class="col-12">
+            <div class="col-12 col-sm-6 col-md-4">
                 <div class="form-group mb-2">
                     <select class="form-control select-control">
-                        <option value="1">Option 1</option>
-                        <option value="1">Option 1</option>
-                        <option value="1">Option 1</option>
-                        <option value="1">Option 1</option>
-                        <option value="1">Option 1</option>
+                        <option value="">-- Dealer Service --</option>
+                        {{#each dealerList.dealer_services }}
+                            <option value="{{ title }}">{{ title }}</option>
+                        {{/each}}
                     </select>
                 </div>
             </div>
-            <div class="col-12">
+            <div class="col-12 col-sm-6 col-md-4">
                 <div class="form-group mb-0">
                     <select class="form-control select-control">
-                        <option value="1">Option 1</option>
-                        <option value="1">Option 1</option>
-                        <option value="1">Option 1</option>
-                        <option value="1">Option 1</option>
-                        <option value="1">Option 1</option>
+                        <option value="">-- Kota --</option>
+                        {{#each dealerList.dealer_cities }}
+                            <option value="{{ title }}">{{ title }}</option>
+                        {{/each}}
                     </select>
                 </div>
             </div>
@@ -138,33 +50,44 @@ dealers: [
 
 <div id="map" style="height: 400px; width: 100%;"></div>
 
-<div class="container">
-    <div class="select">
-        <select class="form-control select-control">
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
-            <option value="4">Option 4</option>
-        </select>
+<section id="section__dealer-list" class="py-8">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="grid-container grid--dealer-list">
+                    {{#each dealerList.dealers}}
+                        <div class="grid-item text-dark">
+                            <h6>{{name}}</h6>
+                            <ul class="bx-ul m-0 pl-4">
+                                <li><i class="bx bx-buildings"></i>{{ address }}</li>
+                                <li><i class="bx bx-phone"></i>{{ phone }}</li>
+                                <li><i class="bx bx-printer"></i>{{ fax }}</li>
+                            </ul>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-
+</section>
 
 
 <script>
     document.addEventListener( 'DOMContentLoaded', function () {
         let dealers = [
-            {{#each dealers}}
-                {
-                    name: '{{name}}',
-                    lat: {{latitude}},
-                    long: {{longitude}},
-                    address: '{{address}}',
-                    city: '{{city}}',
-                    phone: '{{phone}}',
-                    fax: '{{fax}}',
-                    service: '{{service}}'
-                },
+            {{#each dealerList.dealers}}
+                {{# if latitude}}
+                    {
+                        name: '{{name}}',
+                        lat: {{latitude}},
+                        long: {{longitude}},
+                        address: '{{address}}',
+                        city: '{{city}}',
+                        phone: '{{phone}}',
+                        fax: '{{fax}}',
+                        service: '{{service}}'
+                    },
+                {{/if}}
             {{/each}}
         ]
 
@@ -175,12 +98,14 @@ dealers: [
         
 
         const infoWindowContent = (marker) => {
-            let str = '<div class="marker-info-container>'
-            str += '<div class="marker-info">'
+            let str = '<div class="marker-info-container bg-hino-red rounded">'
+            str += '<img src="/assets/images/logo-heart-horizontal.svg" class="logo-heart-horizontal">'
+            str += '<div class="marker-info bg-white rounded">'
+            str += '<h6>' + marker.name + '</h6>'
             str += '<ul class="bx-ul">'
             str += '<li><i class="bx bx-buildings"></i>' + marker.address + '</li>'
             str += '<li><i class="bx bx-phone"></i>' + marker.phone + '</li>'
-            str += '<li><i class="bx bx-printer"></bi>' + marker.fax + '</li>'
+            str += '<li><i class="bx bx-printer"></i>' + marker.fax + '</li>'
             str += '</ul>'
             str += '</div>'
             str += '</div>'
@@ -188,21 +113,23 @@ dealers: [
             return str
         } 
 
+        let infowindow = new google.maps.InfoWindow();
+
         let markers = dealers.map((dealer, i) => {
             let marker = new google.maps.Marker({
                 map,
                 animation: google.maps.Animation.DROP,
                 position: { lat: dealer.lat, lng: dealer.long },
+                name: dealer.name,
                 address: dealer.address,
                 city: dealer.city,
                 phone: dealer.phone,
                 fax: dealer.fax,
-                service: dealer.service
+                service: dealer.service,
+                icon: '/assets/images/ic-map-marker.svg'
             })
-            let infowindow = new google.maps.InfoWindow({
-                content: infoWindowContent(marker),
-            });
             google.maps.event.addListener(marker, 'click', () => { 
+                infowindow.setContent(infoWindowContent(marker))
                 infowindow.open(map, marker);
             });
             return marker

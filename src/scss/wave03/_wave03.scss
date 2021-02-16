@@ -1,6 +1,9 @@
 
-    @import "variables";
-    @import "node_modules/bootstrap/scss/bootstrap";
+@import "variables";
+@import "node_modules/bootstrap/scss/bootstrap";
+html {
+    background: $white;
+}
 
 .w3 {
     @import 'partials/reset';
@@ -13,4 +16,11 @@
     @import 'pages/0200-onboarding';
     @import 'pages/0300-home';
     @import 'pages/0500-dealer';
+    @import 'pages/0700-category-news';
+    @import 'pages/0701-detail-news';
+    @import 'pages/0800-after-sales';
+    @import 'pages/0900-sales-script';
+    @import 'pages/1000-sales-talk';
+    @import 'pages/1200-regulasi-pemerintah';
+    @import 'pages/1300-gso-sales-information';
 }

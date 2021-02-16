@@ -1,0 +1,30 @@
+---
+layout: 'layouts/authenticated'
+title: 'Detail News (Formated)'
+order: 701
+status: 'completed'
+body_classes: 'auth detail-news'
+topbar: true
+topbar_title: 'News'
+---
+
+<section id="section__news" class="py-8">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <article class="text-dark">
+                    <h3 class="mb-6">{{ articleList.articles.[5].title }}</h3>
+                    <div class="d-flex mb-6">
+                        <span class="text-uppercase">Admin</span>
+                        <span class="mx-1">|</span>
+                        <span>12 Juli 2020</span>
+                    </div>
+                    <div class="featured-image rounded mb-4" style="background-image: url('https://www.hino.co.id/hino_staging/{{ articleList.articles.[23].image }}');"></div>
+                    {{{formatArticle articleList.articles.[23].description }}}
+                </article>
+            </div>            
+        </div>
+    </div>
+</section>
+
+

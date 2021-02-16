@@ -1,0 +1,117 @@
+---
+layout: 'layouts/authenticated'
+title: 'After Sales'
+order: 800
+status: 'completed'
+body_classes: 'auth after-sales'
+topbar: true
+topbar_title: 'After Sales'
+include_splide: true
+after_sales_service: [
+    {
+        title: 'Program Layanan Purna Jual'
+    },
+    {
+        title: 'Suku Cadang & Aksesoris'
+    },
+    {
+        title: 'Dukungan Operasional'
+    },
+    {
+        title: 'Engine Overhaul'
+    }
+]
+---
+
+<section id="section__after-sales" class="py-8">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card search-box after-sales--search-box mb-6">
+                    <div class="card-body py-0">
+                        <div class="d-flex align-items-center">
+                            <div class="col p-0">
+                                <input type="text" class="search-box" placeholder="Cari After Sales" >
+                            </div>
+                            <div class="col-auto p-0">
+                                <box-icon name="search" size="24px" color="#444444" class="d-block"></box-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-container grid--after-sales">
+                    {{#each after_sales_service }}
+                    <div class="grid-item card m-0">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-stretch">
+                                <div class="icon">
+                                    <img src="/assets/images/ic-after-sales-item.svg" class="img-icon" />
+                                </div>
+                                <div class="title mx-2 text-dark flex-grow-1 d-flex align-items-center justify-content-center">
+                                    <p class="m-0">{{ title }}</p>
+                                </div>
+                                <div class="actions">
+                                    <div class="h-100 d-flex flex-column justify-content-between">
+                                        <button class="btn-action btn-download">
+                                            <box-icon name="download" size="1rem"></box-icon>
+                                        </button>
+                                        <button class="btn-action btn-share">
+                                            <box-icon name="share-alt" size="1rem"></box-icon>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>            
+        </div>
+    </div>
+</section>
+
+<div id="popup-after-sales-detail" class="popup-overlay">
+    <div class="popup rounded">
+        <div class="header"><button class="btn-close"><box-icon name="x"></box-icon></button></div>
+        <div class="splide splide--after-sales splide--gallery w-100">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <img src="/assets/images/img-after-sales-gallery.png" style="width: 100%; max-width: 200%;" />
+                    </li>
+                    <li class="splide__slide d-flex align-items-end">
+                        <img src="/assets/images/img-after-sales-gallery.png" style="width: 100%; max-width: 200%;" />
+                    </li>
+                </ul>
+            </div>
+        </div> 
+    </div>
+</div>
+
+<script>
+    document.addEventListener( 'DOMContentLoaded', function () {
+
+        document.querySelector('#popup-after-sales-detail .btn-close').addEventListener('click', () => {
+            document.querySelector('#popup-after-sales-detail').classList.remove('is-active')
+        })
+
+        Array.from(document.querySelectorAll('.grid--after-sales .grid-item .title')).forEach((item,index) => {
+            item.addEventListener('click', () => {
+                document.querySelector('#popup-after-sales-detail').classList.add('is-active')
+                
+                let splideAfterSales = new Splide( '.splide--after-sales', {
+                    arrows: true,
+                    autoplay: false,
+                    keyboard: false,
+                    cover: false,
+                    perMove: 1,
+                    pagination: false,
+                    arrowPath: 'M25,35l-15-15L25,5,20,0,0,20,20,40Z'
+                }).mount()
+            })
+        })
+
+
+        
+    })
+</script>

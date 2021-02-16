@@ -1,0 +1,37 @@
+---
+layout: 'layouts/authenticated'
+title: 'Category News'
+order: 700
+status: 'completed'
+body_classes: 'auth news-list'
+topbar: true
+topbar_title: 'News'
+---
+
+<section id="section__news-list" class="py-8">
+    <div class="container">
+        <div class="row">
+            {{#each articleList.articles}}
+                <div class="col-12 col-md-6 mb-8">
+                    <div class="card h-100 m-0">
+                        <div class="card-body">
+                            <div class="d-flex">
+                                <div class="featured-image mr-4 rounded flex-shrink-0" style="background-image: url('https://www.hino.co.id/hino_staging/{{ image }}');"></div>
+                                <div>
+                                    <h5 class="text-dark">{{ title }}</h5>
+                                    <div class="d-flex">
+                                        <span class="text-uppercase">Admin</span>
+                                        <span class="mx-1">|</span>
+                                        <span>12 Juli 2020</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</section>
+
+

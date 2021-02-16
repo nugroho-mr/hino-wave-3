@@ -1,0 +1,49 @@
+&.sales-talk {
+    .grid--sales-talk {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: $spacer * 1.5;
+        .title {
+            cursor: pointer;
+        }
+        .actions {
+            height: $spacer * 3;
+            .btn-action {
+                background: none;
+                border: 0;
+                padding: 0;
+                margin: 0;
+                height: 1rem;
+            }
+        }
+        @include media-breakpoint-up(md) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+    #popup-sales-talk-detail {
+        display: none;
+        .popup {
+            width: 90vw;
+            max-width: 500px;
+            .header {
+                margin: 10px auto;
+                padding-right: 10px;
+                padding-left: 10px;
+                display: flex;
+                justify-content: flex-end;
+                .btn-close {
+                    background: none;
+                    border: 0;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        }
+        &.is-active {
+            display: flex;
+        }
+    }
+}
