@@ -1,0 +1,202 @@
+---
+layout: 'layouts/authenticated'
+title: 'Model HINO - Single Product'
+order: 1502
+status: 'completed'
+body_classes: 'auth hino-model hino-model-single'
+topbar: true
+topbar_title: 'Dutro 110 SD'
+include_splide: true
+---
+
+<div class="layout container-fluid">
+    <div class="row">
+        <div class="col-12 col-lg-6 position-relative">
+            <section id="section__product-single-hero" class="py-6">
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-center">
+                            <div class="row justify-content-between text-left">
+                                <div class="flex-grow-0 flex-shrink-1">
+                                    <h5 class="text-dark">{{ products.range.[0].products.[0].series }}</h5>
+                                    <p>{{ products.range.[0].products.[0].type }}</p>
+                                </div>
+                                <div class="flex-grow-0 flex-shrink-1">
+                                    <h5 class="d-flex align-items-center"><box-icon name="git-compare" color="#888888" size="16px" class="mr-1"></box-icon><span>Compare</span></h5>
+                                </div>
+                            </div>
+                            <div class="splide splide--product-single mb-6 position-relative">
+					            <div class="splide__track flex-grow-1">
+						            <ul class="splide__list">
+							            <li class="splide__slide">
+                                            <img src="https://www.hino.co.id/{{ products.range.[0].products.[0].image }}" id="main-image" class="w-100" />
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img src="https://www.hino.co.id/{{ products.range.[0].products.[0].image }}" id="main-image" class="w-100" />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button id="product-3d-button" class="btn btn-hino-red px-6"><img src="/assets/images/ic-product-3d.svg" class="mr-3" />Product 3D</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-12 col-lg-6">
+            <section id="section__product-single-spec" class="py-6">
+                {{#> partials/accordion-card title="Karoseri" id="karoseri"}}
+                    <img src="https://www.hino.co.id/assets/front_new/images/karoseri/mikro-bus-dutro.svg" class="img-fluid d-block mx-auto" />
+                {{/partials/accordion-card}}
+                {{#> partials/accordion-card title="Performa" id="preforma"}}
+                    <ul class="list-unstyled m-0 pl-0">
+                        <li>Kecepatan Maksimum: 125km/jam</li>
+                        <li>Daya Tanjak: 31,7tan</li>
+                    </ul>
+                {{/partials/accordion-card}}
+                {{#> partials/accordion-card title="Model Mesin" id="model-mesin"}}
+                    <ul class="list-unstyled m-0 pl-0">
+                        <li>Model: W04D-TP</li>
+                        <li>Model Tipe: Mesin Diesel 4 Langkah Segaris; Direct Injection; Turbo Charge Intercooler</li>
+                        <li>Tenaga Maksimum: 110PS / 2.800rpm</li>
+                        <li>Daya maksimum: 29Kg.m / 1.800rpm</li>
+                        <li>Jumlah silinder: 4</li>
+                        <li>Diameter x Langkah Piston: 104mm x 118mm</li>
+                        <li>Isi Silinder: 4.009cc</li>
+                    </ul>
+                {{/partials/accordion-card}}
+                {{#> partials/accordion-card title="Kopling" id="kopling"}}
+                    <ul class="list-unstyled m-0 pl-0">
+                        <li>Tipe: Pelat Kering Tunggal; Hydraulic Operation</li>
+                        <li>Diameter Cakram: 300mm</li>
+                    </ul>
+                {{/partials/accordion-card}}
+                {{#> partials/accordion-card title="Transmisi" id="transmisi"}}
+                    <ul class="list-unstyled m-0 pl-0">
+                        <li>Tipe: M153</li>
+                        <li>Ke-1: 5.339</li>
+                        <li>Ke-2: 2.792</li>
+                        <li>Ke-3: 1.593</li>
+                        <li>Ke-4: 1.000</li>
+                        <li>Ke-5: 0.788</li>
+                        <li>Mundur: 5.339</li>
+                    </ul>
+                {{/partials/accordion-card}}
+                {{#> partials/accordion-card title="Kemudi" id="kemudi"}}
+                    <ul class="list-unstyled m-0 pl-0">
+                        <li>Tipe: Power Steering (Recirculating Ball Screw)</li>
+                        <li>Minimal Radius Putar: 5,5m</li>
+                    </ul>
+                {{/partials/accordion-card}}
+                {{#> partials/accordion-card title="Sumbu" id="sumbu"}}
+                    <ul class="list-unstyled m-0 pl-0">
+                        <li>Belakang: Full Floating Type, Single Reduction, Single Speed by Hypoid Gear</li>
+                        <li>Depan: Reverse Elliot, I-Section Beam</li>
+                        <li>Perbandingan Gigi Akhir: 4,625</li>
+                        <li>Sistem Penggerak: Rear 4 x 2</li>
+                    </ul>
+                {{/partials/accordion-card}}
+                {{#> partials/accordion-card title="Rem" id="rem"}}
+                    <ul class="list-unstyled m-0 pl-0">
+                        <li>Rem Utama: Vacuum Servo dengan Sirkuit Ganda; Dilengkapi Booster</li>
+                        <li>Rem Pelambat: Terletak Pada Pipa Gas Buang</li>
+                        <li>Rem Parkir: Internal Expanding pada Output Shaft Transmisi</li>
+                    </ul>
+                {{/partials/accordion-card}}
+                {{#> partials/accordion-card title="Roda & Ban" id="roda-ban"}}
+                    <ul class="list-unstyled m-0 pl-0">
+                        <li>Ukuran Rim: 15 x 5.50f-30</li>
+                        <li>Ukuran Ban: 7.50–15–14PR</li>
+                        <li>Jumlah Ban: 4 (+1)</li>
+                    </ul>
+                {{/partials/accordion-card}}
+                {{#> partials/accordion-card title="Suspensi" id="suspensi"}}
+                    <ul class="list-unstyled m-0 pl-0">
+                        <li>Depan & Belakang: Rigid Axle dengan Pegas Daun Semi Elliptic dilengkapi Shock Absorber</li>
+                    </ul>
+                {{/partials/accordion-card}}
+                {{#> partials/accordion-card title="Sistim Listrik Accu" id="sistim-listrik-accu"}}
+                    <ul class="list-unstyled m-0 pl-0">
+                        <li>Accu: 12V-100Ah (Battery Tunggal)</li>
+                    </ul>
+                {{/partials/accordion-card}}
+                {{#> partials/accordion-card title="Dimensi" id="dimensi"}}
+                    <ul class="list-unstyled m-0 pl-0">
+                        <li>Jarak Sumbu Roda: 2.530mm</li>
+                        <li>Kabin Kesumbu Roda Belakang: 2.050mm</li>
+                        <li>Total Panjang: 4.745mm</li>
+                        <li>Total Lebar: 1.717mm</li>
+                        <li>Total Tinggi: 2.120mm</li>
+                        <li>Lebar Jejak Depan: 1.415mm</li>
+                        <li>Lebar Jejak Belakang: 1.420mm</li>
+                        <li>Julur Depan: 1.066mm</li>
+                        <li>Julur Belakang: 1.149mm</li>
+                    </ul>
+                {{/partials/accordion-card}}
+                {{#> partials/accordion-card title="Tangki Solar" id="tangki-solar"}}
+                    <ul class="list-unstyled m-0 pl-0">
+                        <li>Kapasitas: 100Liter</li>
+                    </ul>
+                {{/partials/accordion-card}}
+                {{#> partials/accordion-card title="Berat Chassis" id="berat-chassis"}}
+                    <ul class="list-unstyled m-0 pl-0">
+                        <li>Berat Kosong: 1.923Kg</li>
+                        <li>GVWR / GCWR: 5.200Kg</li>
+                    </ul>
+                {{/partials/accordion-card}}
+            </section>
+        </div>
+    </div>
+</div>
+
+<div id="popup--product-360" class="popup-overlay">
+    <div class="popup rounded">
+        <div class="header"><button class="btn-close"><box-icon name="x"></box-icon></button></div>
+        <div class="splide splide--product-360 splide--gallery w-100">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <img src="https://www.hino.co.id/{{ products.range.[0].products.[0].image }}" />
+                    </li>
+                    <li class="splide__slide">
+                        <img src="https://www.hino.co.id/{{ products.range.[0].products.[0].image }}" />
+                    </li>
+                </ul>
+            </div>
+        </div> 
+    </div>
+</div>
+
+<script>
+    document.addEventListener( 'DOMContentLoaded', function () {
+        let splideProductGallery = new Splide( '.splide--product-single', {
+            arrows: true,
+            autoplay: false,
+            keyboard: false,
+            pagination: false,
+            perMove: 1,
+            arrowPath: 'M25,35l-15-15L25,5,20,0,0,20,20,40Z'
+        }).mount()
+
+        document.querySelector('#popup--product-360 .btn-close').addEventListener('click', () => {
+            document.querySelector('#popup--product-360').classList.remove('is-active')
+        })
+
+        document.getElementById('product-3d-button').addEventListener('click', () => {
+            document.querySelector('#popup--product-360').classList.add('is-active')
+            
+            let splideProduct360 = new Splide( '.splide--product-360', {
+                arrows: true,
+                autoplay: false,
+                keyboard: false,
+                cover: false,
+                perMove: 1,
+                pagination: false,
+                rewind: true,
+                type: 'fade',
+                arrowPath: 'M25,35l-15-15L25,5,20,0,0,20,20,40Z'
+            }).mount()
+        })
+    })
+        
+</script>

@@ -1,0 +1,43 @@
+&.catalogue-gso {
+    .grid--karoseri-penyedia {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: $spacer * 1.5;
+        @include media-breakpoint-up(md) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+    .splide--katalog-gso-produk {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        .splide__arrows {
+            .splide__arrow {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                border: 0;
+                background: none;
+                padding: 0;
+                margin: 0;
+                font-size: 12px;
+                z-index: 3;
+                svg {
+                    width: 1rem;
+                    height: 1rem;
+                }
+                &.splide__arrow--next {
+                    transform: translateY(-50%);
+                    right: 0;
+                    left: unset;
+                }
+                &:disabled {
+                    display: none;
+                }
+            }
+        }
+    }
+}

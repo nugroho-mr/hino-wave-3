@@ -1,0 +1,116 @@
+---
+layout: 'layouts/authenticated'
+title: 'Simulasi Kredit'
+order: 1600
+status: 'completed'
+body_classes: 'auth simulasi-kredit'
+topbar: true
+topbar_title: 'Simulasi Kredit'
+---
+
+<section id="section__simulasi-kredit" class="py-8">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h5 class="font-weight-normal text-dark mb-8">Perbandingan Antar Leasing</h5>
+                <div class="info-container mb-8">
+                    <h5 class="text-dark mb-6">Informasi Umum</h5>
+                    <div class="grid grid--leasing-form">
+                        {{#>partials/form-field title="Leasing" field_name="leasing" type="select" alt_form=true }}
+                            <option value="addm">addm</option>
+                            <option value="addm">addm</option>
+                            <option value="addm">addm</option>
+                        {{/partials/form-field}}
+                        {{> partials/form-field title="Leasing" field_name="leasing" type="number" alt_form=true }}
+                        {{> partials/form-field title="Tipe ADDB/ADDM" field_name="tipe-addb-addm" type="number" alt_form=true }}
+                        {{> partials/form-field title="Harga OTR / OTR Price" field_name="otr-price" type="number" alt_form=true }}
+                        {{> partials/form-field title="Nilai Uang Muka Murni / Real DP" field_name="real-dp" type="number" alt_form=true }}
+                        {{> partials/form-field title="Biaya Administrasi / Admin Fee" field_name="admin-fee" type="number" alt_form=true }}
+                        {{> partials/form-field title="Subsidi Uang Muka / DP Subsidy" field_name="dp-subsidy" type="number" alt_form=true }}
+                    </div>
+                </div>
+                <div class="leasing-container mb-10">
+                    <h5 class="text-dark mb-6">Leasing A</h5>
+                    <div class="grid grid--leasing-form">
+                        {{> partials/form-field title="Tipe" field_name="leasing-1_tipe" type="text" value="ADDM"}}
+                        {{> partials/form-field title="Harga OTR / OTR Price" field_name="leasing-1_otr-price" type="number" value="240000000" }}
+                        {{> partials/form-field title="Asuransi (TLO) / Insurance (TLO)" field_name="leasing-1_insurance-tlo" type="number" value="1536000" }}
+                        {{> partials/form-field title="Uang Muka / DP" field_name="leasing-1_uang-muka-perc" type="text" value="30%" }}
+                        {{> partials/form-field title="Nominal PH Total / Total Principal" field_name="leasing-1_total-principal" type="number" value="168000000" }}
+                        {{> partials/form-field title="Bunga Jual (Flat) / Flat Rate" field_name="leasing-1_flate-rate" type="text" value="6.50%" }}
+                        {{> partials/form-field title="Bunga Jual (Effektif) / Effective Rate" field_name="leasing-1_effective-rate" type="text" value="14.00%" }}
+                        {{> partials/form-field title="Subsidi Bunga/ Rate Subsidy" field_name="leasing-1_rate-subsidy" type="number" value="10000000" }}
+                        {{> partials/form-field title="Angsuran / Bulan" field_name="leasing-1_angsuran" type="number" value="14077000" }}
+                        {{> partials/form-field title="Uang Muka / DP" field_name="leasing-1_uang-muka" type="number" value="72000000" }}
+                        {{> partials/form-field title="Biaya Administrasi / Admin Fee" field_name="leasing-1_admin-fee" type="number" value="2000000" }}
+                        {{> partials/form-field title="Provisi" field_name="leasing-1_provisi" type="number" value="840000" }}
+                        {{> partials/form-field title="Asuransi Tunai / Cash Insurance" field_name="leasing-1_cash-insurance" type="number" value="1536000" }}
+                        {{> partials/form-field title="Angsuran Pertama / First Installment" field_name="leasing-1_first-installment" type="number" value="14077000" }}
+                        {{> partials/form-field title="Pembayaran I / First Payment" field_name="leasing-1_first-payment" type="number" value="90453000" }}
+                        {{> partials/form-field title="Subsidi Uang Muka / DP Subsidy" field_name="leasing-1_dp-subsidy" type="number" value="" }}
+                        {{> partials/form-field title="Total Pembayaran I / First Payment" field_name="leasing-1_first-payment-total" type="number" value="90453000" }}
+                        {{> partials/form-field title="Pelunasan ke Dealer" field_name="leasing-1_dealer-payment" type="number" value="149547000" }}
+                        {{> partials/form-field title="Total Bayar Customer" field_name="leasing-1_cust-total-payment" type="number" value="245300000" }}
+                    </div>
+                    <div class="row justify-content-md-end">
+                        <div class="col-12 col-md">
+                            <div class="d-flex justify-content-between justify-content-md-end">
+                                <div class="mr-2 flex-grow-1 flex-md-grow-0">
+                                    <a class="btn btn-hino-primary text-white btn-sm w-100 py-2" href="#">
+                                        <i class="bx bx-download"></i>&nbsp;&nbsp;Simpan Simulasi
+                                    </a>
+                                </div>
+                                <div class="ml-2 flex-grow-1 flex-md-grow-0">
+                                    <a class="btn btn-hino-red btn-sm w-100 py-2" href="#">
+                                        <i class="bx bx-share-alt"></i>&nbsp;&nbsp;Bagikan Simulasi
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="leasing-container">
+                    <h5 class="text-dark mb-6">Leasing B</h5>
+                    <div class="grid grid--leasing-form">
+                        {{> partials/form-field title="Tipe" field_name="leasing-2_tipe" type="text" value="ADDM"}}
+                        {{> partials/form-field title="Harga OTR / OTR Price" field_name="leasing-2_otr-price" type="number" value="240000000" }}
+                        {{> partials/form-field title="Asuransi (TLO) / Insurance (TLO)" field_name="leasing-2_insurance-tlo" type="number" value="1536000" }}
+                        {{> partials/form-field title="Uang Muka / DP" field_name="leasing-2_uang-muka-perc" type="text" value="30%" }}
+                        {{> partials/form-field title="Nominal PH Total / Total Principal" field_name="leasing-2_total-principal" type="number" value="168000000" }}
+                        {{> partials/form-field title="Bunga Jual (Flat) / Flat Rate" field_name="leasing-2_flate-rate" type="text" value="6.50%" }}
+                        {{> partials/form-field title="Bunga Jual (Effektif) / Effective Rate" field_name="leasing-2_effective-rate" type="text" value="14.00%" }}
+                        {{> partials/form-field title="Subsidi Bunga/ Rate Subsidy" field_name="leasing-2_rate-subsidy" type="number" value="10000000" }}
+                        {{> partials/form-field title="Angsuran / Bulan" field_name="leasing-2_angsuran" type="number" value="14077000" }}
+                        {{> partials/form-field title="Uang Muka / DP" field_name="leasing-2_uang-muka" type="number" value="72000000" }}
+                        {{> partials/form-field title="Biaya Administrasi / Admin Fee" field_name="leasing-2_admin-fee" type="number" value="2000000" }}
+                        {{> partials/form-field title="Provisi" field_name="leasing-2_provisi" type="number" value="840000" }}
+                        {{> partials/form-field title="Asuransi Tunai / Cash Insurance" field_name="leasing-2_cash-insurance" type="number" value="1536000" }}
+                        {{> partials/form-field title="Angsuran Pertama / First Installment" field_name="leasing-2_first-installment" type="number" value="14077000" }}
+                        {{> partials/form-field title="Pembayaran I / First Payment" field_name="leasing-2_first-payment" type="number" value="90453000" }}
+                        {{> partials/form-field title="Subsidi Uang Muka / DP Subsidy" field_name="leasing-2_dp-subsidy" type="number" value="" }}
+                        {{> partials/form-field title="Total Pembayaran I / First Payment" field_name="leasing-2_first-payment-total" type="number" value="90453000" }}
+                        {{> partials/form-field title="Pelunasan ke Dealer" field_name="leasing-2_dealer-payment" type="number" value="149547000" }}
+                        {{> partials/form-field title="Total Bayar Customer" field_name="leasing-2_cust-total-payment" type="number" value="245300000" }}
+                    </div>
+                    
+                    <div class="row justify-content-md-end">
+                        <div class="col-12 col-md">
+                            <div class="d-flex justify-content-between justify-content-md-end">
+                                <div class="mr-2 flex-grow-1 flex-md-grow-0">
+                                    <a class="btn btn-hino-primary text-white btn-sm w-100 py-2" href="#">
+                                        <i class="bx bx-download"></i>&nbsp;&nbsp;Simpan Simulasi
+                                    </a>
+                                </div>
+                                <div class="ml-2 flex-grow-1 flex-md-grow-0">
+                                    <a class="btn btn-hino-red btn-sm w-100 py-2" href="#">
+                                        <i class="bx bx-share-alt"></i>&nbsp;&nbsp;Bagikan Simulasi
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

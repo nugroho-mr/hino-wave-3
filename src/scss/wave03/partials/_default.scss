@@ -143,3 +143,43 @@ html & {
         padding: 0;
     }
 }
+
+.card--accordion {
+    .card-header {
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+    }
+    .card-body {
+        display: none;
+    }
+    &.is-active {
+        .card-header {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            box-icon {
+                transform: rotate(180deg);
+            }
+        }
+        .card-body {
+            display: block;
+        }
+    }
+}
+
+.btn {
+    .bx {
+        font-size: unset;
+    }
+}
+
+.form-group {
+    &.form-group--alt {
+        .form-control {
+            background-color: #F2F5F9;
+            border-color: #E3E7EC;
+            border-width: 1px;
+            border-radius: $border-radius-sm;
+
+        }
+    }
+}

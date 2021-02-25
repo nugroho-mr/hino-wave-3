@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Hino Wave 3 - Produk Komparasi - Hino</title>
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/assets/vendor/boxicons/css/boxicons.min.css">
+</head>
+<body class="w3 auth product-comparison product-comparison-hino has-topbar">
+    
+    
+    <div id="topbar" class="bg-hino-red py-4">
+        <div class="container">
+            <div class="row text-white">
+                <div class="col-auto col-left d-flex align-items-center">
+                    <button><box-icon name="left-arrow-alt" color="#ffffff"></box-icon></button>
+                    <h5 class="ml-1 mb-0">Komparasi</h5>
+                </div>
+                <div class="col col-right">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<section id="section__komparasi-hino" class="py-6">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mb-6">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-auto">
+                        <h5 class="text-dark text-uppercase m-0">Kategori Truk</h5>
+                    </div>
+                    <div class="col-auto">
+                        <button class="btn btn-hino-red px-6 py-2 btn-sm"><i class="bx bx-shuffle"></i>&nbsp;&nbsp;Komparasi</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <p class="form-warning text-danger text-center">Produk harus lebih dari satu</p>
+                <div class="grid grid--product-list">
+                        <div class="d-flex flex-column justify-content-between">
+                            <image src="https://www.hino.co.id/assets/uploads/products/dutro-110-sd6.png" class="img-fluid mb-4" />
+                            <div class="row">
+                                <div class="col-auto">
+                                    <input type="checkbox" />
+                                </div>
+                                <div class="col pl-0">
+                                    <hp class=" font-weight-bold text-dark m-0">Dutro 110 SD</hp>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column justify-content-between">
+                            <image src="https://www.hino.co.id/assets/uploads/products/New_Dutro_MDL_Box1.png" class="img-fluid mb-4" />
+                            <div class="row">
+                                <div class="col-auto">
+                                    <input type="checkbox" />
+                                </div>
+                                <div class="col pl-0">
+                                    <hp class=" font-weight-bold text-dark m-0">Dutro 110 LDL</hp>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column justify-content-between">
+                            <image src="https://www.hino.co.id/assets/uploads/products/New_Dutro_HD_Dump_02_02.png" class="img-fluid mb-4" />
+                            <div class="row">
+                                <div class="col-auto">
+                                    <input type="checkbox" />
+                                </div>
+                                <div class="col pl-0">
+                                    <hp class=" font-weight-bold text-dark m-0">Dutro 130 HD</hp>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column justify-content-between">
+                            <image src="https://www.hino.co.id/assets/uploads/products/New_Dutro_130_HDL_NEW-DI3.png" class="img-fluid mb-4" />
+                            <div class="row">
+                                <div class="col-auto">
+                                    <input type="checkbox" />
+                                </div>
+                                <div class="col pl-0">
+                                    <hp class=" font-weight-bold text-dark m-0">Dutro 130 HD LSD</hp>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column justify-content-between">
+                            <image src="https://www.hino.co.id/assets/uploads/products/dutro-130-hdm.png" class="img-fluid mb-4" />
+                            <div class="row">
+                                <div class="col-auto">
+                                    <input type="checkbox" />
+                                </div>
+                                <div class="col pl-0">
+                                    <hp class=" font-weight-bold text-dark m-0">Dutro 130 HD Mixer</hp>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="footer-spacer"></div>
+<div id="floating-footer-menu">
+    <div class="grid-container bg-dark rounded-lg">
+        <!-- class "current" added for current active page -->
+        <div class="grid-item item-home current">
+            <a href="#"><box-icon type="solid" name="home" color="#ffffff" size="1.5rem"></box-icon></a>
+        </div>
+        <div class="grid-item item-event">
+            <a href="#"></a><box-icon name="calendar-event" color="#ffffff" size="1.5rem"></box-icon></a>
+        </div>
+        <!-- class "has-alert" added for icon with unread notification -->
+        <div class="grid-item item-notification has-alert">
+            <a href="#"><box-icon type="solid" name="bell" color="#ffffff" size="1.5rem"></box-icon></a>
+        </div>
+        <div class="grid-item item-profile">
+            <a href="#"><span class="avatar rounded-circle" style="background-image: url('/assets/images/avatar.jpg')"></span></a>
+        </div>
+    </div>
+</div>
+
+    <script src="/assets/vendor/boxicons/js/boxicons.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded',() => {
+            document.querySelectorAll('.card--accordion .card-header').forEach(item => {
+                item.addEventListener('click', event => {
+                    let parentNode = event.currentTarget.parentNode
+                    parentNode.classList.toggle('is-active')
+                })
+            })
+        })
+    </script>
+
+</body>
+</html>

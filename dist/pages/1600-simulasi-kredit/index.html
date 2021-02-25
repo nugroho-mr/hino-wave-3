@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Hino Wave 3 - Simulasi Kredit</title>
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/assets/vendor/boxicons/css/boxicons.min.css">
+</head>
+<body class="w3 auth simulasi-kredit has-topbar">
+    
+    
+    <div id="topbar" class="bg-hino-red py-4">
+        <div class="container">
+            <div class="row text-white">
+                <div class="col-auto col-left d-flex align-items-center">
+                    <button><box-icon name="left-arrow-alt" color="#ffffff"></box-icon></button>
+                    <h5 class="ml-1 mb-0">Simulasi Kredit</h5>
+                </div>
+                <div class="col col-right">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<section id="section__simulasi-kredit" class="py-8">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h5 class="font-weight-normal text-dark mb-8">Perbandingan Antar Leasing</h5>
+                <div class="info-container mb-8">
+                    <h5 class="text-dark mb-6">Informasi Umum</h5>
+                    <div class="grid grid--leasing-form">
+<div class="form-group row align-items-center form-group--alt">
+    <div class="col-4">
+        <label for="leasing">Leasing</label>
+    </div>
+    <div class="col-8">
+            <select class="form-control" name="leasing" id="leasing">
+                                            <option value="addm">addm</option>
+                                            <option value="addm">addm</option>
+                                            <option value="addm">addm</option>
+            </select>
+    </div>
+</div>                        <div class="form-group row align-items-center form-group--alt">
+                            <div class="col-4">
+                                <label for="leasing">Leasing</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="leasing" id="leasing" value="" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center form-group--alt">
+                            <div class="col-4">
+                                <label for="tipe-addb-addm">Tipe ADDB/ADDM</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="tipe-addb-addm" id="tipe-addb-addm" value="" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center form-group--alt">
+                            <div class="col-4">
+                                <label for="otr-price">Harga OTR / OTR Price</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="otr-price" id="otr-price" value="" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center form-group--alt">
+                            <div class="col-4">
+                                <label for="real-dp">Nilai Uang Muka Murni / Real DP</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="real-dp" id="real-dp" value="" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center form-group--alt">
+                            <div class="col-4">
+                                <label for="admin-fee">Biaya Administrasi / Admin Fee</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="admin-fee" id="admin-fee" value="" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center form-group--alt">
+                            <div class="col-4">
+                                <label for="dp-subsidy">Subsidi Uang Muka / DP Subsidy</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="dp-subsidy" id="dp-subsidy" value="" />
+                                    </div>
+                        </div>                    </div>
+                </div>
+                <div class="leasing-container mb-10">
+                    <h5 class="text-dark mb-6">Leasing A</h5>
+                    <div class="grid grid--leasing-form">
+                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-1_tipe">Tipe</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="text" class="form-control" name="leasing-1_tipe" id="leasing-1_tipe" value="ADDM" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-1_otr-price">Harga OTR / OTR Price</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="leasing-1_otr-price" id="leasing-1_otr-price" value="240000000" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-1_insurance-tlo">Asuransi (TLO) / Insurance (TLO)</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="leasing-1_insurance-tlo" id="leasing-1_insurance-tlo" value="1536000" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-1_uang-muka-perc">Uang Muka / DP</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="text" class="form-control" name="leasing-1_uang-muka-perc" id="leasing-1_uang-muka-perc" value="30%" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-1_total-principal">Nominal PH Total / Total Principal</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="leasing-1_total-principal" id="leasing-1_total-principal" value="168000000" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-1_flate-rate">Bunga Jual (Flat) / Flat Rate</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="text" class="form-control" name="leasing-1_flate-rate" id="leasing-1_flate-rate" value="6.50%" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-1_effective-rate">Bunga Jual (Effektif) / Effective Rate</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="text" class="form-control" name="leasing-1_effective-rate" id="leasing-1_effective-rate" value="14.00%" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-1_rate-subsidy">Subsidi Bunga/ Rate Subsidy</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="leasing-1_rate-subsidy" id="leasing-1_rate-subsidy" value="10000000" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-1_angsuran">Angsuran / Bulan</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="leasing-1_angsuran" id="leasing-1_angsuran" value="14077000" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-1_uang-muka">Uang Muka / DP</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="leasing-1_uang-muka" id="leasing-1_uang-muka" value="72000000" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-1_admin-fee">Biaya Administrasi / Admin Fee</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="leasing-1_admin-fee" id="leasing-1_admin-fee" value="2000000" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-1_provisi">Provisi</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="leasing-1_provisi" id="leasing-1_provisi" value="840000" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-1_cash-insurance">Asuransi Tunai / Cash Insurance</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="leasing-1_cash-insurance" id="leasing-1_cash-insurance" value="1536000" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-1_first-installment">Angsuran Pertama / First Installment</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="leasing-1_first-installment" id="leasing-1_first-installment" value="14077000" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-1_first-payment">Pembayaran I / First Payment</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="leasing-1_first-payment" id="leasing-1_first-payment" value="90453000" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-1_dp-subsidy">Subsidi Uang Muka / DP Subsidy</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="leasing-1_dp-subsidy" id="leasing-1_dp-subsidy" value="" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-1_first-payment-total">Total Pembayaran I / First Payment</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="leasing-1_first-payment-total" id="leasing-1_first-payment-total" value="90453000" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-1_dealer-payment">Pelunasan ke Dealer</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="leasing-1_dealer-payment" id="leasing-1_dealer-payment" value="149547000" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-1_cust-total-payment">Total Bayar Customer</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="leasing-1_cust-total-payment" id="leasing-1_cust-total-payment" value="245300000" />
+                                    </div>
+                        </div>                    </div>
+                    <div class="row justify-content-md-end">
+                        <div class="col-12 col-md">
+                            <div class="d-flex justify-content-between justify-content-md-end">
+                                <div class="mr-2 flex-grow-1 flex-md-grow-0">
+                                    <a class="btn btn-hino-primary text-white btn-sm w-100 py-2" href="#">
+                                        <i class="bx bx-download"></i>&nbsp;&nbsp;Simpan Simulasi
+                                    </a>
+                                </div>
+                                <div class="ml-2 flex-grow-1 flex-md-grow-0">
+                                    <a class="btn btn-hino-red btn-sm w-100 py-2" href="#">
+                                        <i class="bx bx-share-alt"></i>&nbsp;&nbsp;Bagikan Simulasi
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="leasing-container">
+                    <h5 class="text-dark mb-6">Leasing B</h5>
+                    <div class="grid grid--leasing-form">
+                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-2_tipe">Tipe</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="text" class="form-control" name="leasing-2_tipe" id="leasing-2_tipe" value="ADDM" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-2_otr-price">Harga OTR / OTR Price</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="leasing-2_otr-price" id="leasing-2_otr-price" value="240000000" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-2_insurance-tlo">Asuransi (TLO) / Insurance (TLO)</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="leasing-2_insurance-tlo" id="leasing-2_insurance-tlo" value="1536000" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-2_uang-muka-perc">Uang Muka / DP</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="text" class="form-control" name="leasing-2_uang-muka-perc" id="leasing-2_uang-muka-perc" value="30%" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-2_total-principal">Nominal PH Total / Total Principal</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="leasing-2_total-principal" id="leasing-2_total-principal" value="168000000" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-2_flate-rate">Bunga Jual (Flat) / Flat Rate</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="text" class="form-control" name="leasing-2_flate-rate" id="leasing-2_flate-rate" value="6.50%" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-2_effective-rate">Bunga Jual (Effektif) / Effective Rate</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="text" class="form-control" name="leasing-2_effective-rate" id="leasing-2_effective-rate" value="14.00%" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-2_rate-subsidy">Subsidi Bunga/ Rate Subsidy</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="leasing-2_rate-subsidy" id="leasing-2_rate-subsidy" value="10000000" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-2_angsuran">Angsuran / Bulan</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="leasing-2_angsuran" id="leasing-2_angsuran" value="14077000" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-2_uang-muka">Uang Muka / DP</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="leasing-2_uang-muka" id="leasing-2_uang-muka" value="72000000" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-2_admin-fee">Biaya Administrasi / Admin Fee</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="leasing-2_admin-fee" id="leasing-2_admin-fee" value="2000000" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-2_provisi">Provisi</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="leasing-2_provisi" id="leasing-2_provisi" value="840000" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-2_cash-insurance">Asuransi Tunai / Cash Insurance</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="leasing-2_cash-insurance" id="leasing-2_cash-insurance" value="1536000" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-2_first-installment">Angsuran Pertama / First Installment</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="leasing-2_first-installment" id="leasing-2_first-installment" value="14077000" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-2_first-payment">Pembayaran I / First Payment</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="leasing-2_first-payment" id="leasing-2_first-payment" value="90453000" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-2_dp-subsidy">Subsidi Uang Muka / DP Subsidy</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="leasing-2_dp-subsidy" id="leasing-2_dp-subsidy" value="" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-2_first-payment-total">Total Pembayaran I / First Payment</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="leasing-2_first-payment-total" id="leasing-2_first-payment-total" value="90453000" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-2_dealer-payment">Pelunasan ke Dealer</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="leasing-2_dealer-payment" id="leasing-2_dealer-payment" value="149547000" />
+                                    </div>
+                        </div>                        <div class="form-group row align-items-center ">
+                            <div class="col-4">
+                                <label for="leasing-2_cust-total-payment">Total Bayar Customer</label>
+                            </div>
+                            <div class="col-8">
+                                    <input type="number" class="form-control" name="leasing-2_cust-total-payment" id="leasing-2_cust-total-payment" value="245300000" />
+                                    </div>
+                        </div>                    </div>
+                    
+                    <div class="row justify-content-md-end">
+                        <div class="col-12 col-md">
+                            <div class="d-flex justify-content-between justify-content-md-end">
+                                <div class="mr-2 flex-grow-1 flex-md-grow-0">
+                                    <a class="btn btn-hino-primary text-white btn-sm w-100 py-2" href="#">
+                                        <i class="bx bx-download"></i>&nbsp;&nbsp;Simpan Simulasi
+                                    </a>
+                                </div>
+                                <div class="ml-2 flex-grow-1 flex-md-grow-0">
+                                    <a class="btn btn-hino-red btn-sm w-100 py-2" href="#">
+                                        <i class="bx bx-share-alt"></i>&nbsp;&nbsp;Bagikan Simulasi
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="footer-spacer"></div>
+<div id="floating-footer-menu">
+    <div class="grid-container bg-dark rounded-lg">
+        <!-- class "current" added for current active page -->
+        <div class="grid-item item-home current">
+            <a href="#"><box-icon type="solid" name="home" color="#ffffff" size="1.5rem"></box-icon></a>
+        </div>
+        <div class="grid-item item-event">
+            <a href="#"></a><box-icon name="calendar-event" color="#ffffff" size="1.5rem"></box-icon></a>
+        </div>
+        <!-- class "has-alert" added for icon with unread notification -->
+        <div class="grid-item item-notification has-alert">
+            <a href="#"><box-icon type="solid" name="bell" color="#ffffff" size="1.5rem"></box-icon></a>
+        </div>
+        <div class="grid-item item-profile">
+            <a href="#"><span class="avatar rounded-circle" style="background-image: url('/assets/images/avatar.jpg')"></span></a>
+        </div>
+    </div>
+</div>
+
+    <script src="/assets/vendor/boxicons/js/boxicons.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded',() => {
+            document.querySelectorAll('.card--accordion .card-header').forEach(item => {
+                item.addEventListener('click', event => {
+                    let parentNode = event.currentTarget.parentNode
+                    parentNode.classList.toggle('is-active')
+                })
+            })
+        })
+    </script>
+
+</body>
+</html>

@@ -25,8 +25,18 @@
         <script src="/assets/vendor/splidejs/js/splide.min.js"></script>
     {{/if}}
     {{#if include_lightgallery }}
-        <link rel="stylesheet" href="/assets/vendor/lightgalleryjs/js/lightgallery.min.js">
+        <script src="/assets/vendor/lightgalleryjs/js/lightgallery.min.js"></script>
     {{/if}}
+    <script>
+        document.addEventListener('DOMContentLoaded',() => {
+            document.querySelectorAll('.card--accordion .card-header').forEach(item => {
+                item.addEventListener('click', event => {
+                    let parentNode = event.currentTarget.parentNode
+                    parentNode.classList.toggle('is-active')
+                })
+            })
+        })
+    </script>
 
 </body>
 </html>

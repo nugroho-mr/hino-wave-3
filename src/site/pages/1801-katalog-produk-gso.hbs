@@ -1,0 +1,71 @@
+---
+layout: 'layouts/authenticated'
+title: 'Katalog Produk GSO'
+order: 1801
+status: 'completed'
+body_classes: 'auth catalogue-gso'
+topbar: true
+topbar_title: 'Katalog Produk GSO'
+include_splide: true
+---
+
+<section id="section__katalog-gso-produk" class="py-6">
+    <div class="container">
+        <div class="row ">
+            <div class="col-12 col-md-6">
+                <h5 class="text-dark mb-6">New HINO Dutro 110 HD</h5>
+                <div class="bg-gray-200 rounded-lg p-5 mb-6">
+                    <div class="splide splide--katalog-gso-produk w-100">
+                        <div class="splide__arrows">
+                            <button class="splide__arrow splide__arrow--prev">
+                                <box-icon name="chevron-left-circle" size="24px" color="#444444"></box-icon>
+                            </button>
+                            <button class="splide__arrow splide__arrow--next">
+                                <box-icon name="chevron-right-circle" size="24px" color="#444444"></box-icon>
+                            </button>
+                        </div>
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    <img src="/assets/images/img-dutro.png" class="img-fluid" />
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="/assets/images/img-dutro.png" class="img-fluid" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div> 
+                </div>
+                <p class="text-dark">Truck Arm Roll: Truck Arm Roll ini pada umumnya digunakan oleh Dinas Kebersihan dan Lingkungan Hidup untuk mengambil Sampah dan menaruhnya sebagai sebagai TPS di Perumahan / Kawasan Perumahan</p>
+            </div>
+            <div class="col-12 col-md-6">
+                {{#> partials/accordion-card title="Tipe" id="tipe"}}
+                    <p>Lorem ipsum dolor sit amet.</p>
+                {{/partials/accordion-card}}
+                {{#> partials/accordion-card title="Kapasitas Range" id="kapasitas-range"}}
+                    <p>Lorem ipsum dolor sit amet.</p>
+                {{/partials/accordion-card}}
+                {{#> partials/accordion-card title="Reff Customer" id="reff-customer"}}
+                    <p>Dinas Kebersihan, Dinas Pertamanan, Dinas Lingkungan Hidup</p>
+                {{/partials/accordion-card}}
+                
+                <div class="w-100 d-flex flex-row-reverse">
+                    <button class="btn btn-hino-red btn-sm text-white px-6 py-2"><i class="bx bx-bus"></i>&nbsp;&nbsp;Karoseri Penyedia</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let splideGSOProduk = new Splide( '.splide--katalog-gso-produk', {
+            arrows: true,
+            autoplay: false,
+            keyboard: false,
+            cover: false,
+            perMove: 1,
+            pagination: false,
+            arrowPath: 'M25,35l-15-15L25,5,20,0,0,20,20,40Z'
+        }).mount()
+    })
+</script>

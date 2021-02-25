@@ -1,0 +1,300 @@
+---
+layout: 'layouts/authenticated'
+title: 'Produk Komparasi - Result'
+order: 1702
+status: 'completed'
+body_classes: 'auth product-comparison product-comparison-result'
+topbar: true
+topbar_title: 'Komparasi'
+---
+
+<section id="section__komparasi-hino-info" class="py-6">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h5 class="text-dark mb-6 text-uppercase">Kategori Truk</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 d-flex flex-column justify-content-between">
+                <img src="http://www.hino.co.id/{{ products.range.[0].products.[0].image}}" class="img-fluid mb-3" />
+                <select>
+                    {{#each products.range.[0].products}}
+                        <option>{{ series }}</option>
+                    {{/each}}
+                </select>
+            </div>
+            <div class="col-6 d-flex flex-column justify-content-between">
+                <img src="http://www.hino.co.id/{{ products.range.[0].products.[2].image}}" class="img-fluid mb-3" />
+                <select>
+                    {{#each products.range.[0].products}}
+                        <option>{{ series }}</option>
+                    {{/each}}
+                </select>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="section__komparasi-hino-result">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h5 class="text-dark mb-6">Truk</h5>
+                {{#> partials/accordion-card title="Karoseri" id="karoseri"}}
+                    <div class="grid grid--komparasi">
+                        <div>
+                            <img src="https://www.hino.co.id/assets/front_new/images/karoseri/mikro-bus-dutro.svg" class="img-fluid d-block mx-auto" />
+                        </div>
+                        <div>
+                            <img src="https://www.hino.co.id/assets/front_new/images/karoseri/mikro-bus-dutro.svg" class="img-fluid d-block mx-auto" />
+                        </div>
+                    </div>
+                {{/partials/accordion-card}}
+                {{#> partials/accordion-card title="Performa" id="preforma"}}
+                    <div class="grid grid--komparasi">
+                        <div>
+                            <ul class="list-unstyled m-0 pl-0">
+                                <li>Kecepatan Maksimum: 125km/jam</li>
+                                <li>Daya Tanjak: 31,7tan</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="list-unstyled m-0 pl-0">
+                                <li>Kecepatan Maksimum: 125km/jam</li>
+                                <li>Daya Tanjak: 31,7tan</li>
+                            </ul>
+                        </div>
+                    </div>
+                {{/partials/accordion-card}}
+                {{#> partials/accordion-card title="Model Mesin" id="model-mesin"}}
+                    <div class="grid grid--komparasi">
+                        <div>
+                            <ul class="list-unstyled m-0 pl-0">
+                                <li>Model: W04D-TP</li>
+                                <li>Model Tipe: Mesin Diesel 4 Langkah Segaris; Direct Injection; Turbo Charge Intercooler</li>
+                                <li>Tenaga Maksimum: 110PS / 2.800rpm</li>
+                                <li>Daya maksimum: 29Kg.m / 1.800rpm</li>
+                                <li>Jumlah silinder: 4</li>
+                                <li>Diameter x Langkah Piston: 104mm x 118mm</li>
+                                <li>Isi Silinder: 4.009cc</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="list-unstyled m-0 pl-0">
+                                <li>Model: W04D-TP</li>
+                                <li>Model Tipe: Mesin Diesel 4 Langkah Segaris; Direct Injection; Turbo Charge Intercooler</li>
+                                <li>Tenaga Maksimum: 110PS / 2.800rpm</li>
+                                <li>Daya maksimum: 29Kg.m / 1.800rpm</li>
+                                <li>Jumlah silinder: 4</li>
+                                <li>Diameter x Langkah Piston: 104mm x 118mm</li>
+                                <li>Isi Silinder: 4.009cc</li>
+                            </ul>
+                        </div>
+                    </div>
+                {{/partials/accordion-card}}
+                {{#> partials/accordion-card title="Kopling" id="kopling"}}
+                    <div class="grid grid--komparasi">
+                        <div>
+                            <ul class="list-unstyled m-0 pl-0">
+                                <li>Tipe: Pelat Kering Tunggal; Hydraulic Operation</li>
+                                <li>Diameter Cakram: 300mm</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="list-unstyled m-0 pl-0">
+                                <li>Tipe: Pelat Kering Tunggal; Hydraulic Operation</li>
+                                <li>Diameter Cakram: 300mm</li>
+                            </ul>
+                        </div>
+                    </div>
+                {{/partials/accordion-card}}
+                {{#> partials/accordion-card title="Transmisi" id="transmisi"}}
+                    <div class="grid grid--komparasi">
+                        <div>
+                            <ul class="list-unstyled m-0 pl-0">
+                                <li>Tipe: M153</li>
+                                <li>Ke-1: 5.339</li>
+                                <li>Ke-2: 2.792</li>
+                                <li>Ke-3: 1.593</li>
+                                <li>Ke-4: 1.000</li>
+                                <li>Ke-5: 0.788</li>
+                                <li>Mundur: 5.339</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="list-unstyled m-0 pl-0">
+                                <li>Tipe: M153</li>
+                                <li>Ke-1: 5.339</li>
+                                <li>Ke-2: 2.792</li>
+                                <li>Ke-3: 1.593</li>
+                                <li>Ke-4: 1.000</li>
+                                <li>Ke-5: 0.788</li>
+                                <li>Mundur: 5.339</li>
+                            </ul>
+                        </div>
+                    </div>
+                {{/partials/accordion-card}}
+                {{#> partials/accordion-card title="Kemudi" id="kemudi"}}
+                    <div class="grid grid--komparasi">
+                        <div>
+                            <ul class="list-unstyled m-0 pl-0">
+                                <li>Tipe: Power Steering (Recirculating Ball Screw)</li>
+                                <li>Minimal Radius Putar: 5,5m</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="list-unstyled m-0 pl-0">
+                                <li>Tipe: Power Steering (Recirculating Ball Screw)</li>
+                                <li>Minimal Radius Putar: 5,5m</li>
+                            </ul>
+                        </div>
+                    </div>
+                {{/partials/accordion-card}}
+                {{#> partials/accordion-card title="Sumbu" id="sumbu"}}
+                    <div class="grid grid--komparasi">
+                        <div>
+                            <ul class="list-unstyled m-0 pl-0">
+                                <li>Belakang: Full Floating Type, Single Reduction, Single Speed by Hypoid Gear</li>
+                                <li>Depan: Reverse Elliot, I-Section Beam</li>
+                                <li>Perbandingan Gigi Akhir: 4,625</li>
+                                <li>Sistem Penggerak: Rear 4 x 2</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="list-unstyled m-0 pl-0">
+                                <li>Belakang: Full Floating Type, Single Reduction, Single Speed by Hypoid Gear</li>
+                                <li>Depan: Reverse Elliot, I-Section Beam</li>
+                                <li>Perbandingan Gigi Akhir: 4,625</li>
+                                <li>Sistem Penggerak: Rear 4 x 2</li>
+                            </ul>
+                        </div>
+                    </div>
+                {{/partials/accordion-card}}
+                {{#> partials/accordion-card title="Rem" id="rem"}}
+                    <div class="grid grid--komparasi">
+                        <div>
+                            <ul class="list-unstyled m-0 pl-0">
+                                <li>Rem Utama: Vacuum Servo dengan Sirkuit Ganda; Dilengkapi Booster</li>
+                                <li>Rem Pelambat: Terletak Pada Pipa Gas Buang</li>
+                                <li>Rem Parkir: Internal Expanding pada Output Shaft Transmisi</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="list-unstyled m-0 pl-0">
+                                <li>Rem Utama: Vacuum Servo dengan Sirkuit Ganda; Dilengkapi Booster</li>
+                                <li>Rem Pelambat: Terletak Pada Pipa Gas Buang</li>
+                                <li>Rem Parkir: Internal Expanding pada Output Shaft Transmisi</li>
+                            </ul>
+                        </div>
+                    </div>
+                {{/partials/accordion-card}}
+                {{#> partials/accordion-card title="Roda & Ban" id="roda-ban"}}
+                    <div class="grid grid--komparasi">
+                        <div>
+                            <ul class="list-unstyled m-0 pl-0">
+                                <li>Ukuran Rim: 15 x 5.50f-30</li>
+                                <li>Ukuran Ban: 7.50–15–14PR</li>
+                                <li>Jumlah Ban: 4 (+1)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="list-unstyled m-0 pl-0">
+                                <li>Ukuran Rim: 15 x 5.50f-30</li>
+                                <li>Ukuran Ban: 7.50–15–14PR</li>
+                                <li>Jumlah Ban: 4 (+1)</li>
+                            </ul>
+                        </div>
+                    </div>
+                {{/partials/accordion-card}}
+                {{#> partials/accordion-card title="Suspensi" id="suspensi"}}
+                    <div class="grid grid--komparasi">
+                        <div>
+                            <ul class="list-unstyled m-0 pl-0">
+                                <li>Depan & Belakang: Rigid Axle dengan Pegas Daun Semi Elliptic dilengkapi Shock Absorber</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="list-unstyled m-0 pl-0">
+                                <li>Depan & Belakang: Rigid Axle dengan Pegas Daun Semi Elliptic dilengkapi Shock Absorber</li>
+                            </ul>
+                        </div>
+                    </div>
+                {{/partials/accordion-card}}
+                {{#> partials/accordion-card title="Sistim Listrik Accu" id="sistim-listrik-accu"}}
+                    <div class="grid grid--komparasi">
+                        <div>
+                            <ul class="list-unstyled m-0 pl-0">
+                                <li>Accu: 12V-100Ah (Battery Tunggal)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="list-unstyled m-0 pl-0">
+                                <li>Accu: 12V-100Ah (Battery Tunggal)</li>
+                            </ul>
+                        </div>
+                    </div>
+                {{/partials/accordion-card}}
+                {{#> partials/accordion-card title="Dimensi" id="dimensi"}}
+                    <div class="grid grid--komparasi">
+                        <div>
+                            <ul class="list-unstyled m-0 pl-0">
+                                <li>Jarak Sumbu Roda: 2.530mm</li>
+                                <li>Kabin Kesumbu Roda Belakang: 2.050mm</li>
+                                <li>Total Panjang: 4.745mm</li>
+                                <li>Total Lebar: 1.717mm</li>
+                                <li>Total Tinggi: 2.120mm</li>
+                                <li>Lebar Jejak Depan: 1.415mm</li>
+                                <li>Lebar Jejak Belakang: 1.420mm</li>
+                                <li>Julur Depan: 1.066mm</li>
+                                <li>Julur Belakang: 1.149mm</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="list-unstyled m-0 pl-0">
+                                <li>Jarak Sumbu Roda: 2.530mm</li>
+                                <li>Kabin Kesumbu Roda Belakang: 2.050mm</li>
+                                <li>Total Panjang: 4.745mm</li>
+                                <li>Total Lebar: 1.717mm</li>
+                                <li>Total Tinggi: 2.120mm</li>
+                                <li>Lebar Jejak Depan: 1.415mm</li>
+                                <li>Lebar Jejak Belakang: 1.420mm</li>
+                                <li>Julur Depan: 1.066mm</li>
+                                <li>Julur Belakang: 1.149mm</li>
+                            </ul>
+                        </div>
+                    </div>
+                {{/partials/accordion-card}}
+                {{#> partials/accordion-card title="Tangki Solar" id="tangki-solar"}}
+                    <div class="grid grid--komparasi">
+                        <div>
+                            <ul class="list-unstyled m-0 pl-0">
+                                <li>Kapasitas: 100Liter</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="list-unstyled m-0 pl-0">
+                                <li>Kapasitas: 100Liter</li>
+                            </ul>
+                        </div>
+                    </div>
+                {{/partials/accordion-card}}
+                {{#> partials/accordion-card title="Berat Chassis" id="berat-chassis"}}
+                    <div class="grid grid--komparasi">
+                        <div>
+                            <ul class="list-unstyled m-0 pl-0">
+                                <li>Berat Kosong: 1.923Kg</li>
+                                <li>GVWR / GCWR: 5.200Kg</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="list-unstyled m-0 pl-0">
+                                <li>Berat Kosong: 1.923Kg</li>
+                                <li>GVWR / GCWR: 5.200Kg</li>
+                            </ul>
+                        </div>
+                    </div>
+                {{/partials/accordion-card}}
+            </div>
+        </div>
+    </div>
+</section>

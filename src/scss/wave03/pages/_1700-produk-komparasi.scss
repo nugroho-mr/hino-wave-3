@@ -1,0 +1,25 @@
+&.product-comparison {
+    .grid--komparasi {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        & > div:first-child {
+            border-right: 2px dotted $gray-200;
+            padding-right: $spacer;
+        }
+        & > div:last-child {
+            padding-left: $spacer;
+        }
+    }
+    .grid--product-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: $spacer * 1.5;
+    }
+    #section__komparasi-hino-info {
+        select {
+            border-color: $gray-600;
+            padding: 5px 3px;
+            border-radius: $border-radius-sm;
+        }
+    }
+}

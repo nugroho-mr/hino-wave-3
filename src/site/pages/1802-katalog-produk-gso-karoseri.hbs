@@ -1,0 +1,52 @@
+---
+layout: 'layouts/authenticated'
+title: 'Katalog Produk GSO - Karoseri Penyedia'
+order: 1802
+status: 'completed'
+body_classes: 'auth catalogue-gso catalogue-gso-karoseri'
+topbar: true
+topbar_title: 'Katalog Produk GSO'
+address: [
+    {
+        title: 'PT Karunia Perdana Putra',
+        address: 'Jl. Raya H. Tabri, Cirarab, Kec. Legok, Tangerang, Banten 15820',
+        phone: '(021) 54260123'
+    },
+    {
+        title: 'PT Jakarta Famili Tehnik Karoseri',
+        address: 'Jl. Kenari 2 No.9A, RT.3/RW.3, Kenari, Kec. Senen, Kota Jakarta Pusat, Jakarta 10430',
+        phone: '(021) 3910155'
+    },
+    {
+        title: 'PT Karunia Perdana Putra',
+        address: 'Jl. Raya H. Tabri, Cirarab, Kec. Legok, Tangerang, Banten 15820',
+        phone: '(021) 54260123'
+    },
+    {
+        title: 'PT Jakarta Famili Tehnik Karoseri',
+        address: 'Jl. Kenari 2 No.9A, RT.3/RW.3, Kenari, Kec. Senen, Kota Jakarta Pusat, Jakarta 10430',
+        phone: '(021) 54260123'
+    },
+]
+---
+
+<section id="section__produk-gso-karoseri" class="py-6">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h5 class="text-dark mb-6">Karoseri Penyedia</h5>
+                <div class="grid grid--karoseri-penyedia">
+                    {{#each address}}
+                        <div class="item text-dark">
+                            <p>
+                                <strong>{{ title }}</strong><br />
+                                {{ address }}<br /><br />
+                                <i class="bx bx-phone"></i>&nbsp;Phone: {{ phone }}
+                            </p>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,44 @@
+---
+layout: 'layouts/authenticated'
+title: 'Produk Komparasi - Hino'
+order: 1701
+status: 'completed'
+body_classes: 'auth product-comparison product-comparison-hino'
+topbar: true
+topbar_title: 'Komparasi'
+---
+
+<section id="section__komparasi-hino" class="py-6">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mb-6">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-auto">
+                        <h5 class="text-dark text-uppercase m-0">Kategori Truk</h5>
+                    </div>
+                    <div class="col-auto">
+                        <button class="btn btn-hino-red px-6 py-2 btn-sm"><i class="bx bx-shuffle"></i>&nbsp;&nbsp;Komparasi</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <p class="form-warning text-danger text-center">Produk harus lebih dari satu</p>
+                <div class="grid grid--product-list">
+                    {{#each products.range.[0].products }}
+                        <div class="d-flex flex-column justify-content-between">
+                            <image src="https://www.hino.co.id/{{ image }}" class="img-fluid mb-4" />
+                            <div class="row">
+                                <div class="col-auto">
+                                    <input type="checkbox" />
+                                </div>
+                                <div class="col pl-0">
+                                    <hp class=" font-weight-bold text-dark m-0">{{ series }}</hp>
+                                </div>
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

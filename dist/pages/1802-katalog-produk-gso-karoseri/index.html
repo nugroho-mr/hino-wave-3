@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Hino Wave 3 - Katalog Produk GSO - Karoseri Penyedia</title>
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/assets/vendor/boxicons/css/boxicons.min.css">
+</head>
+<body class="w3 auth catalogue-gso catalogue-gso-karoseri has-topbar">
+    
+    
+    <div id="topbar" class="bg-hino-red py-4">
+        <div class="container">
+            <div class="row text-white">
+                <div class="col-auto col-left d-flex align-items-center">
+                    <button><box-icon name="left-arrow-alt" color="#ffffff"></box-icon></button>
+                    <h5 class="ml-1 mb-0">Katalog Produk GSO</h5>
+                </div>
+                <div class="col col-right">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<section id="section__produk-gso-karoseri" class="py-6">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h5 class="text-dark mb-6">Karoseri Penyedia</h5>
+                <div class="grid grid--karoseri-penyedia">
+                        <div class="item text-dark">
+                            <p>
+                                <strong>PT Karunia Perdana Putra</strong><br />
+                                Jl. Raya H. Tabri, Cirarab, Kec. Legok, Tangerang, Banten 15820<br /><br />
+                                <i class="bx bx-phone"></i>&nbsp;Phone: (021) 54260123
+                            </p>
+                        </div>
+                        <div class="item text-dark">
+                            <p>
+                                <strong>PT Jakarta Famili Tehnik Karoseri</strong><br />
+                                Jl. Kenari 2 No.9A, RT.3/RW.3, Kenari, Kec. Senen, Kota Jakarta Pusat, Jakarta 10430<br /><br />
+                                <i class="bx bx-phone"></i>&nbsp;Phone: (021) 3910155
+                            </p>
+                        </div>
+                        <div class="item text-dark">
+                            <p>
+                                <strong>PT Karunia Perdana Putra</strong><br />
+                                Jl. Raya H. Tabri, Cirarab, Kec. Legok, Tangerang, Banten 15820<br /><br />
+                                <i class="bx bx-phone"></i>&nbsp;Phone: (021) 54260123
+                            </p>
+                        </div>
+                        <div class="item text-dark">
+                            <p>
+                                <strong>PT Jakarta Famili Tehnik Karoseri</strong><br />
+                                Jl. Kenari 2 No.9A, RT.3/RW.3, Kenari, Kec. Senen, Kota Jakarta Pusat, Jakarta 10430<br /><br />
+                                <i class="bx bx-phone"></i>&nbsp;Phone: (021) 54260123
+                            </p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="footer-spacer"></div>
+<div id="floating-footer-menu">
+    <div class="grid-container bg-dark rounded-lg">
+        <!-- class "current" added for current active page -->
+        <div class="grid-item item-home current">
+            <a href="#"><box-icon type="solid" name="home" color="#ffffff" size="1.5rem"></box-icon></a>
+        </div>
+        <div class="grid-item item-event">
+            <a href="#"></a><box-icon name="calendar-event" color="#ffffff" size="1.5rem"></box-icon></a>
+        </div>
+        <!-- class "has-alert" added for icon with unread notification -->
+        <div class="grid-item item-notification has-alert">
+            <a href="#"><box-icon type="solid" name="bell" color="#ffffff" size="1.5rem"></box-icon></a>
+        </div>
+        <div class="grid-item item-profile">
+            <a href="#"><span class="avatar rounded-circle" style="background-image: url('/assets/images/avatar.jpg')"></span></a>
+        </div>
+    </div>
+</div>
+
+    <script src="/assets/vendor/boxicons/js/boxicons.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded',() => {
+            document.querySelectorAll('.card--accordion .card-header').forEach(item => {
+                item.addEventListener('click', event => {
+                    let parentNode = event.currentTarget.parentNode
+                    parentNode.classList.toggle('is-active')
+                })
+            })
+        })
+    </script>
+
+</body>
+</html>

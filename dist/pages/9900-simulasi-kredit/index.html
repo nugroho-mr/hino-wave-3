@@ -16,6 +16,16 @@
 <h1 class="title">Page - Simulasi Kredit</h1>
 
     <script src="/assets/vendor/boxicons/js/boxicons.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded',() => {
+            document.querySelectorAll('.card--accordion .card-header').forEach(item => {
+                item.addEventListener('click', event => {
+                    let parentNode = event.currentTarget.parentNode
+                    parentNode.classList.toggle('is-active')
+                })
+            })
+        })
+    </script>
 
 </body>
 </html>

@@ -1,0 +1,285 @@
+---
+layout: 'layouts/authenticated'
+title: 'Vehicle Maintenance'
+order: 1400
+status: 'completed'
+body_classes: 'auth vehicle-maintenance'
+topbar: true
+topbar_title: 'Vehicle Maintenance'
+---
+
+<section id="section__vehicle-maintenance" class="py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h5 class="text-dark mb-4">Maintenance &amp; Part HINO in Vehicle Life Time</h5>
+                <div class="form-group d-flex align-items-center justify-content-between">
+                    <div class="col-auto px-0 mr-2">
+                        <label class="mb-0">Kategori</label>
+                    </div>
+                    <div class="col-7 px-0">
+                        <select class="form-control">
+                            <option value="dutro">Dutro</option>
+                            <option value="ranger">Ranger</option>
+                            <option value="profia">Profia</option>
+                            <option value="hino-bus">Hino Bus</option>
+                        </select>
+                    </div>
+                    
+                </div>
+                <div class="form-group d-flex align-items-center justify-content-between">
+                    <div class="col-auto px-0 mr-2">
+                        <label class="mb-0">Variant</label>
+                    </div>
+                    <div class="col-7 px-0">
+                        <select class="form-control">
+                            <option value="130md">130MD</option>
+                            <option value="110sdl">110SDL</option>
+                            <option value="110sd">110SD</option>
+                            <option value="110ld">110LD</option>
+                        </select>
+                    </div>
+                    
+                </div>
+                <div class="form-group d-flex align-items-center justify-content-between">
+                    <div class="col-auto px-0 mr-2">
+                        <label class="mb-0">Usia Kendaraan</label>
+                    </div>
+                    <div class="col-7 px-0">
+                        <select class="form-control">
+                            <option value="1">1<sup>st</sup> Year</option>
+                            <option value="2">2<sup>nd</sup> Year</option>
+                            <option value="3">3<sup>rd</sup> Year</option>
+                            <option value="4">4<sup>th</sup> Year</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group d-flex align-items-center justify-content-between">
+                    <div class="col-auto px-0 mr-2">
+                        <label class="mb-0">KM Kendaraan</label>
+                    </div>
+                    <div class="col-7 px-0">
+                        <select class="form-control">
+                            <option value="0-10000">0-10.000</option>
+                            <option value="10001-50000">10.001-50.000</option>
+                            <option value="50001-100000">50.001-100.000</option>
+                        </select>
+                    </div>
+                </div>
+                {{#> partials/accordion-card title="Maintenance & Repair" id="maintenance-repair" }}
+                    <ol class="m-0 pl-4">
+                        <li>
+                            <div class="d-flex">
+                                <span class="col px-0">Inspection / Adjust Clutch system</span>
+                                <span class="col-auto px-0 ml-2"><box-icon name="check" size="1em" color="#444444" /></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <span class="col px-0">Inspection / Adjust Brake system </span>
+                                <span class="col-auto px-0 ml-2"><box-icon name="check" size="1em" color="#444444" /></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <span class="col px-0">Inspection Electrical system </span>
+                                <span class="col-auto px-0 ml-2"><box-icon name="check" size="1em" color="#444444" /></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <span class="col px-0">Inspection / Adjust Tire</span>
+                                <span class="col-auto px-0 ml-2"><box-icon name="check" size="1em" color="#444444" /></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <span class="col px-0">Inspection &amp; clean air filter</span>
+                                <span class="col-auto px-0 ml-2"><box-icon name="check" size="1em" color="#444444" /></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <span class="col px-0">E/G oil change</span>
+                                <span class="col-auto px-0 ml-2"><box-icon name="check" size="1em" color="#444444" /></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <span class="col px-0">T/M Diff oil change</span>
+                                <span class="col-auto px-0 ml-2"><box-icon name="check" size="1em" color="#444444" /></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <span class="col px-0">Clutch &amp; Brake fluid change</span>
+                                <span class="col-auto px-0 ml-2"><box-icon name="check" size="1em" color="#444444" /></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <span class="col px-0">Change gease bearing</span>
+                                <span class="col-auto px-0 ml-2"><box-icon name="check" size="1em" color="#444444" /></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <span class="col px-0">Clutch system</span>
+                                <span class="col-auto px-0 ml-2"><box-icon name="check" size="1em" color="#444444" /></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <span class="col px-0">Brake system</span>
+                                <span class="col-auto px-0 ml-2"><box-icon name="check" size="1em" color="#444444" /></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <span class="col px-0">Under system</span>
+                                <span class="col-auto px-0 ml-2"><box-icon name="check" size="1em" color="#444444" /></span>
+                            </div>
+                        </li>
+                    </ol>
+                {{/partials/accordion-card}}
+                {{#> partials/accordion-card title="Overhaul" id="overhaul" }}
+                    <ol class="m-0 pl-4">
+                        <li>
+                            <div class="d-flex">
+                                <span class="col px-0">Engine</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <span class="col px-0">Transmisi</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <span class="col px-0">Differential</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <span class="col px-0">Gearbox Steering</span>
+                            </div>
+                        </li>
+                    </ol>
+                {{/partials/accordion-card}}
+                {{#> partials/accordion-card title="Training" id="training" }}
+                    <ol class="m-0 pl-4">
+                        <li>
+                            <div class="d-flex">
+                                <span class="col px-0">Driver</span>
+                                <box-icon name="check" color="#444444" size="1em" />
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <span class="col px-0">Maintenance</span>
+                                <box-icon name="check" color="#444444" size="1em" />
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <span class="col px-0">Fake Parts</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <span class="col px-0">EPC</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <span class="col px-0">Inventory</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <span class="col px-0">CWMS</span>
+                            </div>
+                        </li>
+                    </ol>
+                {{/partials/accordion-card}}
+                {{#> partials/accordion-card title="Parts Replacement" id="parts-replacement" }}
+                    <p class="mb-2">FAST MOVING</p>
+                    <ol class="pl-4">
+                        <li>
+                            <div class="d-flex">
+                                <span class="col px-0">Oil Filter</span>
+                                <box-icon name="check" color="#444444" size="1em" />
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <span class="col px-0">Fuel Filter</span>
+                                <box-icon name="check" color="#444444" size="1em" />
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <span class="col px-0">Air Cleaner</span>
+                                <box-icon name="check" color="#444444" size="1em" />
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <span class="col px-0">V-belt</span>
+                                <box-icon name="check" color="#444444" size="1em" />
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <span class="col px-0">Tire Seal</span>
+                            </div>
+                        </li>
+                    </ol>
+                    <p class="mb-2">SLOW MOVING</p>
+                    <ol class="pl-4">
+                        <li>
+                            <div class="d-flex">
+                                <span class="col px-0">Disc clutch</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <span class="col px-0">Brake lining</span>
+                            </div>
+                        </li><li>
+                            <div class="d-flex">
+                                <span class="col px-0">Oil Seal</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <span class="col px-0">Kit clutch booster</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <span class="col px-0">Cylinder Kit Master</span>
+                            </div>
+                        </li>
+                    </ol>
+                {{/partials/accordion-card}}
+            </div>
+        </div>
+        <div class="row justify-content-md-end">
+            <div class="col-12 col-md">
+                <div class="d-flex justify-content-between justify-content-md-end">
+                    <div class="mr-2 flex-grow-1 flex-md-grow-0">
+                        <a class="btn btn-hino-primary text-white btn-sm w-100 py-2" href="#">
+                            <i class="bx bx-download"></i>&nbsp;&nbsp;Unduh Maintenance
+                        </a>
+                    </div>
+                    <div class="ml-2 flex-grow-1 flex-md-grow-0">
+                        <a class="btn btn-hino-red btn-sm w-100 py-2" href="#">
+                            <i class="bx bx-share-alt"></i>&nbsp;&nbsp;Bagikan Maintenance
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -11,6 +11,8 @@ $fast-transition: 0.3s;
 $hino-red: #DC0921 !default;
 $hino-red-medium: #e60d2e !default;
 $hino-red-darker: #C80000 !default;
+$hino-primary: #99B8D1 !default;
+
 
 
 $white   : #ffffff !default;
@@ -32,6 +34,7 @@ $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $theme-colors: map-merge(
   (
+    "hino-primary" :       $hino-primary,
     "hino-red":            $hino-red,
     "hino-red-medium":     $hino-red-medium,
     "hino-red-darker":     $hino-red-darker,

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Hino Wave 3 - Katalog Produk GSO</title>
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/assets/vendor/boxicons/css/boxicons.min.css">
+        <link rel="stylesheet" href="/assets/vendor/splidejs/css/splide-core.min.css">
+</head>
+<body class="w3 auth catalogue-gso has-topbar">
+    
+    
+    <div id="topbar" class="bg-hino-red py-4">
+        <div class="container">
+            <div class="row text-white">
+                <div class="col-auto col-left d-flex align-items-center">
+                    <button><box-icon name="left-arrow-alt" color="#ffffff"></box-icon></button>
+                    <h5 class="ml-1 mb-0">Katalog Produk GSO</h5>
+                </div>
+                <div class="col col-right">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<section id="section__katalog-gso-produk" class="py-6">
+    <div class="container">
+        <div class="row ">
+            <div class="col-12 col-md-6">
+                <h5 class="text-dark mb-6">New HINO Dutro 110 HD</h5>
+                <div class="bg-gray-200 rounded-lg p-5 mb-6">
+                    <div class="splide splide--katalog-gso-produk w-100">
+                        <div class="splide__arrows">
+                            <button class="splide__arrow splide__arrow--prev">
+                                <box-icon name="chevron-left-circle" size="24px" color="#444444"></box-icon>
+                            </button>
+                            <button class="splide__arrow splide__arrow--next">
+                                <box-icon name="chevron-right-circle" size="24px" color="#444444"></box-icon>
+                            </button>
+                        </div>
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    <img src="/assets/images/img-dutro.png" class="img-fluid" />
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="/assets/images/img-dutro.png" class="img-fluid" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div> 
+                </div>
+                <p class="text-dark">Truck Arm Roll: Truck Arm Roll ini pada umumnya digunakan oleh Dinas Kebersihan dan Lingkungan Hidup untuk mengambil Sampah dan menaruhnya sebagai sebagai TPS di Perumahan / Kawasan Perumahan</p>
+            </div>
+            <div class="col-12 col-md-6">
+<div class="card card--accordion" id="card-accordion--tipe">
+    <div class="card-header bg-white border-0 d-flex justify-content-between align-items-center">
+        <h5 class="text-dark m-0 text-uppercase">Tipe</h5>
+        <box-icon name="chevron-down" size="1.5rem" color="#888888"></box-icon>
+    </div>
+    <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+</div><div class="card card--accordion" id="card-accordion--kapasitas-range">
+    <div class="card-header bg-white border-0 d-flex justify-content-between align-items-center">
+        <h5 class="text-dark m-0 text-uppercase">Kapasitas Range</h5>
+        <box-icon name="chevron-down" size="1.5rem" color="#888888"></box-icon>
+    </div>
+    <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+</div><div class="card card--accordion" id="card-accordion--reff-customer">
+    <div class="card-header bg-white border-0 d-flex justify-content-between align-items-center">
+        <h5 class="text-dark m-0 text-uppercase">Reff Customer</h5>
+        <box-icon name="chevron-down" size="1.5rem" color="#888888"></box-icon>
+    </div>
+    <div class="card-body pt-0">
+                            <p>Dinas Kebersihan, Dinas Pertamanan, Dinas Lingkungan Hidup</p>
+    </div>
+</div>                
+                <div class="w-100 d-flex flex-row-reverse">
+                    <button class="btn btn-hino-red btn-sm text-white px-6 py-2"><i class="bx bx-bus"></i>&nbsp;&nbsp;Karoseri Penyedia</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let splideGSOProduk = new Splide( '.splide--katalog-gso-produk', {
+            arrows: true,
+            autoplay: false,
+            keyboard: false,
+            cover: false,
+            perMove: 1,
+            pagination: false,
+            arrowPath: 'M25,35l-15-15L25,5,20,0,0,20,20,40Z'
+        }).mount()
+    })
+</script>
+
+<div class="footer-spacer"></div>
+<div id="floating-footer-menu">
+    <div class="grid-container bg-dark rounded-lg">
+        <!-- class "current" added for current active page -->
+        <div class="grid-item item-home current">
+            <a href="#"><box-icon type="solid" name="home" color="#ffffff" size="1.5rem"></box-icon></a>
+        </div>
+        <div class="grid-item item-event">
+            <a href="#"></a><box-icon name="calendar-event" color="#ffffff" size="1.5rem"></box-icon></a>
+        </div>
+        <!-- class "has-alert" added for icon with unread notification -->
+        <div class="grid-item item-notification has-alert">
+            <a href="#"><box-icon type="solid" name="bell" color="#ffffff" size="1.5rem"></box-icon></a>
+        </div>
+        <div class="grid-item item-profile">
+            <a href="#"><span class="avatar rounded-circle" style="background-image: url('/assets/images/avatar.jpg')"></span></a>
+        </div>
+    </div>
+</div>
+
+    <script src="/assets/vendor/boxicons/js/boxicons.js"></script>
+        <script src="/assets/vendor/splidejs/js/splide.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded',() => {
+            document.querySelectorAll('.card--accordion .card-header').forEach(item => {
+                item.addEventListener('click', event => {
+                    let parentNode = event.currentTarget.parentNode
+                    parentNode.classList.toggle('is-active')
+                })
+            })
+        })
+    </script>
+
+</body>
+</html>

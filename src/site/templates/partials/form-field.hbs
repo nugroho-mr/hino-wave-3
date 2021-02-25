@@ -1,0 +1,16 @@
+<div class="form-group row align-items-center {{#if alt_form}}form-group--alt{{/if}}">
+    <div class="col-4">
+        <label for="{{ field_name }}">{{ title }}</label>
+    </div>
+    <div class="col-8">
+        {{#if (eq type 'select')}}
+            <select class="form-control" name="{{ field_name }}" id="{{ field_name }}">
+                {{> @partial-block}}
+            </select>
+        {{else if (eq type 'textarea') }}
+            <textarea class="form-control" name="{{ field_name }}" id="{{ field_name }}" value="{{ value }}"></textarea>
+        {{else}}
+            <input type="{{ type }}" class="form-control" name="{{ field_name }}" id="{{ field_name }}" value="{{ value }}" />
+        {{/if}}
+    </div>
+</div>

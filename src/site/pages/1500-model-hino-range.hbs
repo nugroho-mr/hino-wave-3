@@ -1,0 +1,31 @@
+---
+layout: 'layouts/authenticated'
+title: 'Model HINO - Range'
+order: 1500
+status: 'completed'
+body_classes: 'auth hino-model'
+topbar: true
+topbar_title: 'Model HINO'
+---
+
+<section id="section__product-range" class="py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h5 class="font-weight-normal text-dark mb-6">HINO Truck Categories</h5>
+                <div class="grid-container grid-container--product-range">
+                    {{#each products.range}}
+                        <div class="grid-item bg-gray-200 rounded p-3 px-lg-6 d-flex align-items-center">
+                            <div class="col p-0 mr-2">
+                                <img src="https://hino.co.id/{{ logo }}" class="range-logo w-100" />
+                            </div>
+                            <div class="col-5 p-0">
+                                <img src="https://hino.co.id/{{ image }}" class="range-image w-100" />
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

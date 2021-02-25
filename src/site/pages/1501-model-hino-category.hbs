@@ -1,0 +1,82 @@
+---
+layout: 'layouts/authenticated'
+title: 'Model HINO - Category'
+order: 1501
+status: 'completed'
+body_classes: 'auth hino-model hino-model-category'
+topbar: true
+topbar_title: 'Model HINO'
+---
+
+<section id="section__product-category-hero" class="py-6">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex align-items-center justify-content-between">
+                <div>
+                    <img src="https://hino.co.id/{{ products.range.[2].logo }}" class="product-range-logo" />
+                </div>
+                <div>
+                    <img src="https://hino.co.id/{{ products.range.[2].image }}" class="product-range-image" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="section__product-selection">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h5 class="font-weight-normal text-dark mb-4">{{ products.range.[2].name }}</h5>
+                <select class="form-control select-control">
+                    <option value="All">All</option>
+                    {{#each products.range.[2].available_categories as |item| }}
+                        <option value="{{ item }}">{{ item }}</option>
+                    {{/each}}
+                </select>
+            </div>
+            <div class="col-12 d-flex align-items-center justify-content-between py-6">
+                <p class="m-0">KOMPARASI</p>
+                <box-icon name="shuffle" color="#f01414" size="1.5rem"></box-icon>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="section__product-list">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+               <div class="grid-container grid-container--product-list text-dark">
+                    {{#each products.range.[2].products }}
+                        <div class="grid-item bg-gray-200 rounded px-3 py-4 d-flex align-items-center no-gutters position-relative">
+                            <div class="col-4 mr-1">
+                                <img src="https://hino.co.id/{{ image }}" class="image-product w-100" />
+                            </div>
+                            <div class="col">
+                                <h5 class="font-weight-normal mb-2">{{ series }}</h5>
+                                <p class="m-0">{{ type }}</p>
+                            </div>
+                            <div class="col-auto">
+                                <button class="action-button"><box-icon name="dots-vertical-rounded" color="#444444" size="1.5rem"></box-icon></button>
+                            </div>
+                            <div class="position-absolute action-box">
+                                <button><i class="bx bx-download"></i>&nbsp;&nbsp;Simpan Brosur</button>
+                                <hr />
+                                <button><i class="bx bx-share-alt"></i>&nbsp;&nbsp;Bagikan Brosur</button>
+                            </div>
+                        </div>
+                    {{/each}}
+                </div> 
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded',() => {
+        document.querySelectorAll('.grid-container--product-list .action-button').forEach((item) => {
+            item.addEventListener('click',(event) => {
+                event.target.closest('.grid-item').querySelector('.action-box').classList.toggle('is-active')
+            })
+        })
+    })
+</script>
