@@ -1,0 +1,32 @@
+---
+layout: 'layouts/authenticated'
+title: 'Katalog Produk GSO - Hasil Pencarian'
+order: 1804
+status: 'completed'
+body_classes: 'auth catalogue-gso catalogue-gso-search-result'
+topbar: true
+topbar_title: 'Katalog Produk GSO'
+---
+
+<section id="section__search-result" class="py-6">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h5 class="text-dark mb-6">New HINO Dutro 110 HD</h5>
+                <div class="grid-container grid-container--product-list text-dark">
+                    {{#each products.range.[2].products }}
+                        <div class="grid-item bg-gray-200 rounded px-3 py-4 d-flex align-items-center no-gutters position-relative">
+                            <div class="col-4 mr-1">
+                                <img src="https://hino.co.id/{{ image }}" class="image-product w-100" />
+                            </div>
+                            <div class="col">
+                                <h5 class="font-weight-normal mb-2">{{ series }}</h5>
+                                <p class="m-0">{{ type }}</p>
+                            </div>
+                        </div>
+                    {{/each}}
+                </div> 
+            </div>
+        </div>
+    </div>
+</section>

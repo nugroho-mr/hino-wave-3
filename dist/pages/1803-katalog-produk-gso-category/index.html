@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Hino Wave 3 - Katalog Produk GSO - Kategori</title>
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/assets/vendor/boxicons/css/boxicons.min.css">
+</head>
+<body class="w3 auth catalogue-gso has-topbar">
+    
+    
+    <div id="topbar" class="bg-hino-red py-4">
+        <div class="container">
+            <div class="row text-white">
+                <div class="col-auto col-left d-flex align-items-center">
+                    <button><box-icon name="left-arrow-alt" color="#ffffff"></box-icon></button>
+                    <h5 class="ml-1 mb-0">Katalog Produk GSO</h5>
+                </div>
+                <div class="col col-right">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<section id="section__katalog-gso" class="py-6">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="grid-container grid-container--product-range">
+                        <div class="grid-item bg-gray-200 rounded p-3 px-lg-6 d-flex align-items-center">
+                            <div class="col p-0 mr-2">
+                                <img src="https://hino.co.id/assets/uploads/categories_child/imageedit_34_5121943756.png" class="range-logo w-100" />
+                            </div>
+                            <div class="col-5 p-0">
+                                <img src="https://hino.co.id/assets/uploads/products/dutro-110-sd6.png" class="range-image w-100" />
+                            </div>
+                        </div>
+                        <div class="grid-item bg-gray-200 rounded p-3 px-lg-6 d-flex align-items-center">
+                            <div class="col p-0 mr-2">
+                                <img src="https://hino.co.id/assets/uploads/categories_child/rangerlogo1.png" class="range-logo w-100" />
+                            </div>
+                            <div class="col-5 p-0">
+                                <img src="https://hino.co.id/assets/uploads/products/EX_scooper_Revisi_514HFRIDN001D3.png" class="range-image w-100" />
+                            </div>
+                        </div>
+                        <div class="grid-item bg-gray-200 rounded p-3 px-lg-6 d-flex align-items-center">
+                            <div class="col p-0 mr-2">
+                                <img src="https://hino.co.id/assets/uploads/categories_child/profia_logo1.png" class="range-logo w-100" />
+                            </div>
+                            <div class="col-5 p-0">
+                                <img src="https://hino.co.id/assets/uploads/products/SS1E-01.png" class="range-image w-100" />
+                            </div>
+                        </div>
+                        <div class="grid-item bg-gray-200 rounded p-3 px-lg-6 d-flex align-items-center">
+                            <div class="col p-0 mr-2">
+                                <img src="https://hino.co.id/assets/uploads/categories_child/bus_logo1.png" class="range-logo w-100" />
+                            </div>
+                            <div class="col-5 p-0">
+                                <img src="https://hino.co.id/assets/uploads/products/sdbl31.png" class="range-image w-100" />
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="footer-spacer"></div>
+<div id="floating-footer-menu">
+    <div class="grid-container bg-dark rounded-lg">
+        <!-- class "current" added for current active page -->
+        <div class="grid-item item-home current">
+            <a href="#"><box-icon type="solid" name="home" color="#ffffff" size="1.5rem"></box-icon></a>
+        </div>
+        <div class="grid-item item-event">
+            <a href="#"></a><box-icon name="calendar-event" color="#ffffff" size="1.5rem"></box-icon></a>
+        </div>
+        <!-- class "has-alert" added for icon with unread notification -->
+        <div class="grid-item item-notification has-alert">
+            <a href="#"><box-icon type="solid" name="bell" color="#ffffff" size="1.5rem"></box-icon></a>
+        </div>
+        <div class="grid-item item-profile">
+            <a href="#"><span class="avatar rounded-circle" style="background-image: url('/assets/images/avatar.jpg')"></span></a>
+        </div>
+    </div>
+</div>
+
+    <script src="/assets/vendor/boxicons/js/boxicons.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded',() => {
+            document.querySelectorAll('.card--accordion .card-header').forEach(item => {
+                item.addEventListener('click', event => {
+                    let parentNode = event.currentTarget.parentNode
+                    parentNode.classList.toggle('is-active')
+                })
+            })
+        })
+    </script>
+
+</body>
+</html>

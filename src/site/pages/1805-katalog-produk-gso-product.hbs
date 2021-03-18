@@ -1,0 +1,109 @@
+---
+layout: 'layouts/authenticated'
+title: 'Katalog Produk GSO - Produk'
+order: 1805
+status: 'completed'
+body_classes: 'auth catalogue-gso catalogue-gso-product'
+topbar: true
+topbar_title: 'Katalog Produk GSO'
+include_splide: true
+
+---
+
+<section id="section__produk-gso-product" class="py-6">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h5 class="text-dark mb-6">New HINO Dutro 110 HD Box</h5>
+                <div class="card">
+                    <div class="card-body p-0">
+                        <div class="product-gallery mb-3 bg-gray-200 px-4 py-8 rounded-top">
+                            <div class="splide splide--product-gallery position-relative">
+                                <div class="splide__arrows">
+                                    <button class="splide__arrow splide__arrow--prev">
+                                        <i class="bx bx-chevron-left-circle"></i>
+                                    </button>
+                                    <button class="splide__arrow splide__arrow--next">
+                                        <i class="bx bx-chevron-right-circle"></i>
+                                    </button>
+                                </div>
+                                <div class="splide__track">
+                                    <ul class="splide__list">
+                                        <li class="splide__slide">
+                                            <img src="https://www.hino.co.id/{{ products.range.[0].products.[0].image }}" />
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img src="https://www.hino.co.id/{{ products.range.[0].products.[0].image }}" />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="content p-4 pb-5">
+                            <p>Truck Arm Roll: Truck Arm Roll ini pada umumnya digunakan oleh Dinas Kebersihan dan Lingkungan Hidup untuk mengambil Sampah dan menaruhnya sebagai sebagai TPS di Perumahan / Kawasan Perumahan</p>
+                            <div class="table-container">
+                                <table class="table table-striped table-borderless">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th>Tipe</th>
+                                            <th>Kapasitas Range</th>
+                                            <th>Reff. Customer</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Box Alumunium</td>
+                                            <td>-</td>
+                                            <td>Dinas Kelautan dan Perikanan, Dinas Peternakan, Dinas Perpustakaan &amp; Arsip Daerah</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Refreegerator Dutro HD</td>
+                                            <td>20 M3</td>
+                                            <td>Katalog Sektoral Kementerian Kelautan dan Perikanan</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Refreegerator Dutro HD</td>
+                                            <td>20 M3</td>
+                                            <td>Katalog Sektoral Kementerian Kelautan dan Perikanan</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Refreegerator Dutro HD</td>
+                                            <td>20 M3</td>
+                                            <td>Katalog Sektoral Kementerian Kelautan dan Perikanan</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Refreegerator Dutro HD</td>
+                                            <td>20 M3</td>
+                                            <td>Katalog Sektoral Kementerian Kelautan dan Perikanan</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <div class="flex-grow-0 flex-shrink-0">
+                                    <a class="btn btn-hino-red btn-sm w-100 py-2" href="#">
+                                        <i class="bx bx-bus"></i>&nbsp;&nbsp;Karoseri Penyedia
+                                    </a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener( 'DOMContentLoaded', function () {
+        let splideProductGallery = new Splide( '.splide--product-gallery', {
+            arrows: true,
+            autoplay: false,
+            keyboard: false,
+            pagination: false,
+            perMove: 1,
+            arrowPath: 'M25,35l-15-15L25,5,20,0,0,20,20,40Z'
+        }).mount()
+    })
+</script>

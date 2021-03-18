@@ -1,0 +1,30 @@
+---
+layout: 'layouts/authenticated'
+title: 'Katalog Produk GSO - Kategori'
+order: 1803
+status: 'completed'
+body_classes: 'auth catalogue-gso'
+topbar: true
+topbar_title: 'Katalog Produk GSO'
+---
+
+<section id="section__katalog-gso" class="py-6">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="grid-container grid-container--product-range">
+                    {{#each products.range}}
+                        <div class="grid-item bg-gray-200 rounded p-3 px-lg-6 d-flex align-items-center">
+                            <div class="col p-0 mr-2">
+                                <img src="https://hino.co.id/{{ logo }}" class="range-logo w-100" />
+                            </div>
+                            <div class="col-5 p-0">
+                                <img src="https://hino.co.id/{{ image }}" class="range-image w-100" />
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

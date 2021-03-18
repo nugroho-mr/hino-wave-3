@@ -40,4 +40,79 @@
             }
         }
     }
+    #section__katalog-gso {
+        .grid-container--product-range {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 1.5rem;
+            @include media-breakpoint-up(md) {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    }
+    #section__search-result {
+        .grid-container--product-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: $spacer;
+            .grid-item {
+                .action-button {
+                    margin: 0;
+                    padding: 0;
+                    background: none;
+                    border: 0;
+                }
+                .action-box {
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 40px;
+                    background: $white;
+                    display: none;
+                    hr {
+                        margin: 0;
+                    }
+                    button {
+                        margin: 0;
+                        padding: $spacer * .3 $spacer;
+                        border: 0;
+                        background: none;
+                        .bx {
+                            font-size: 1rem;
+                        }
+                    }
+                    &.is-active {
+                        display: block;
+                    }
+                }
+            }
+            @include media-breakpoint-up(md) {
+                grid-template-columns: 1fr 1fr;
+            }
+            @include media-breakpoint-up(lg) {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+        }
+    }
+    #section__produk-gso-product {
+        .splide--product-gallery {
+            .splide__arrows {
+                position: absolute;
+                z-index: 1;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                .splide__arrow {
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                    background: transparent;
+                    font-size: 1.5rem;
+                    color: $black;
+                }
+            }
+
+        }
+    }
 }
