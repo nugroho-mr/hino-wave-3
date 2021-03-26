@@ -1,0 +1,16 @@
+<section id="spec--{{ id }}" class="spec-section bg-white mt-4 shadow-sm">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 py-5">
+                <h5 class="text-hino-red">{{ title }}</h5>
+                <div class="splide splide--product-comparison" id="splide--{{ id }}">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            {{> @partial-block}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

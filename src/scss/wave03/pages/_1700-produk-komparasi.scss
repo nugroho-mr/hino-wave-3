@@ -1,25 +1,46 @@
 &.product-comparison {
-    .grid--komparasi {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        & > div:first-child {
-            border-right: 2px dotted $gray-200;
-            padding-right: $spacer;
-        }
-        & > div:last-child {
-            padding-left: $spacer;
-        }
-    }
-    .grid--product-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: $spacer * 1.5;
-    }
     #section__komparasi-hino-info {
+        height: calc( 100vh - #{$spacer * 3.5} );
+        overflow-y: scroll;
+        position: relative;
+        .container--products {
+            top: 0;
+            background: $white;
+            left: 0;
+            right: 0;z-index: 10;
+        }
+        .product-specs {
+            padding-bottom: $spacer * 6;
+            .splide__slide {
+                position: relative;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    right: -15px;
+                    border-right: dotted 2px $gray-200;
+                    height: 100%;
+                    top: 0;
+                    @include media-breakpoint-up(md) {
+                        right: -25px;
+                    }
+                }
+                &:last-child {
+                    &:after {
+                        content: none;
+                    }
+                }
+            }
+        }
         select {
             border-color: $gray-600;
             padding: 5px 3px;
             border-radius: $border-radius-sm;
+            width: 100%;
+        }
+    }
+    &.product-comparison-result {
+        .footer-spacer {
+            display: none;
         }
     }
 }
