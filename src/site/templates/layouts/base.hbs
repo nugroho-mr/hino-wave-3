@@ -15,6 +15,9 @@
     {{#if include_lightgallery }}
         <link rel="stylesheet" href="/assets/vendor/lightgalleryjs/css/lightgallery.css">
     {{/if}}
+    {{#if include_autocomplete }}
+        <link rel="stylesheet" href="/assets/vendor/autocomplete/css/autoComplete.css">
+    {{/if}}
 </head>
 <body class="w3 {{ body_classes }} {{#if topbar}}has-topbar{{/if}}">
     
@@ -26,6 +29,9 @@
     {{/if}}
     {{#if include_lightgallery }}
         <script src="/assets/vendor/lightgalleryjs/js/lightgallery.min.js"></script>
+    {{/if}}
+    {{#if include_autocomplete }}
+        <script src="/assets/vendor/autocomplete/js/autoComplete.min.js"></script>
     {{/if}}
     <script>
         document.addEventListener('DOMContentLoaded',() => {

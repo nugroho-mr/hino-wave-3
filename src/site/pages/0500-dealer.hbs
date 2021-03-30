@@ -5,6 +5,7 @@ order: 500
 status: 'completed'
 body_classes: 'auth dealer'
 topbar: true
+include_autocomplete: true
 ---
 
 <section id="section__dealer-search-form" class="py-4">
@@ -36,12 +37,13 @@ topbar: true
             </div>
             <div class="col-12 col-sm-6 col-md-4">
                 <div class="form-group mb-0">
-                    <select class="form-control select-control">
+                    <input type="text" id="select-cities" class="form-control select-control" />
+                    <!--select class="form-control select-control" id="select-cities">
                         <option value="">-- Kota --</option>
                         {{#each dealerList.dealer_cities }}
                             <option value="{{ title }}">{{ title }}</option>
                         {{/each}}
-                    </select>
+                    </select-->
                 </div>
             </div>
         </div>
@@ -92,8 +94,16 @@ topbar: true
         ]
 
         const map = new google.maps.Map(document.getElementById("map"), {
-          center: { lat: -1.5300879, lng: 118.4787664 },
-          zoom: 4,
+          center: { lat: -6.242543, lng: 106.863696 },
+          zoom: 16,
+          restriction: {
+            latLngBounds: {                
+                north: 7.332038,
+                south: -12.895531,
+                east: 142.337897,
+                west: 92.036709
+            },
+          },
         });
         
 
@@ -102,7 +112,7 @@ topbar: true
             str += '<img src="/assets/images/logo-heart-horizontal.svg" class="logo-heart-horizontal">'
             str += '<div class="marker-info bg-white rounded">'
             str += '<h6>' + marker.name + '</h6>'
-            str += '<ul class="bx-ul">'
+            str += '<ul class="bx-ul font-weight-bold">'
             str += '<li><i class="bx bx-buildings"></i>' + marker.address + '</li>'
             str += '<li><i class="bx bx-phone"></i>' + marker.phone + '</li>'
             str += '<li><i class="bx bx-printer"></i>' + marker.fax + '</li>'
@@ -135,7 +145,36 @@ topbar: true
             return marker
         });
 
-        
+        const autoCompleteCities = new autoComplete({
+            data: {
+                src: [
+                    {{#each dealerList.dealer_cities }}
+                        "{{ title }}",
+                    {{/each}}
+                ],
+                cache: true,
+            },
+            placeHolder: '-- City --',
+            selector: '#select-cities',
+            searchEngine: 'loose',
+            noResults: (dataFeedback, generateList) => {
+                // Generate autoComplete List
+                generateList(autoCompleteCities, dataFeedback, dataFeedback.results);
+                // No Results List Item
+                const result = document.createElement("li");
+                result.setAttribute("class", "no_result py-3 px-3");
+                result.setAttribute("tabindex", "1");
+                result.innerHTML = `<h5 class="text-gray-400 font-weight-normal">Found No Results</h5>`;
+                document
+                    .querySelector(`#${autoCompleteCities.resultsList.idName}`)
+                    .appendChild(result);
+            },
+            onSelection: (feedback) => {
+                document.querySelector("#select-cities").blur();
+                document.querySelector("#select-cities").value = feedback.selection.value;
+                console.log(feedback);
+            }
+        });
     })
 </script>
 

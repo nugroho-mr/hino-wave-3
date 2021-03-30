@@ -24,6 +24,7 @@ module.exports = function(config) {
         "node_modules/boxicons/css": "assets/vendor/boxicons/css",
         "node_modules/boxicons/fonts": "assets/vendor/boxicons/fonts",
         "node_modules/lightgallery.js/dist": "assets/vendor/lightgalleryjs",
+        "node_modules/@tarekraafat/autocomplete.js/dist": "assets/vendor/autocomplete",
     })
     config.addCollection('pages', collection => {
         return collection.getFilteredByGlob('src/site/pages/*').sort(function(a, b) {

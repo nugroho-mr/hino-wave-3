@@ -487,6 +487,8 @@ topbar_title: 'Komparasi'
             </li>
         {{/partials/spec-comparation-section}}
     </div>
+    <button class="position-fixed komparasi__prev d-none"><i class="bx bx-chevron-left"></i></button>
+    <button class="position-fixed komparasi__next"><i class="bx bx-chevron-right"></i></button>
 </section>
 
 <script>
@@ -499,6 +501,7 @@ topbar_title: 'Komparasi'
                 arrows: false,
                 pagination: false,
                 gap: '50px',
+                drag: false,
                 breakpoints: {
                     768: {
                         perPage: 2,
@@ -508,14 +511,28 @@ topbar_title: 'Komparasi'
             }).mount();
         }
 
-        splideElms.forEach(function (item, index) {
-            item.on("move", function (newIndex, oldIndex) {
-                if( newIndex != oldIndex ) {
-                    splideElms.forEach(function (item, index) {
-                        item.go(newIndex);
-                    });
-                }
+        const prevBtn = document.querySelector('.komparasi__prev');
+        prevBtn.addEventListener('click', function() {
+            splideElms.forEach(function (item, index) {
+                item.go('-');
             });
         });
+        const nextBtn = document.querySelector('.komparasi__next');
+        nextBtn.addEventListener('click', function() {
+            splideElms.forEach(function (item, index) {
+                item.go('+');
+            });            
+        });
+
+        splideElms[0].on('move', function(nextIndex, prevIndex) {
+            if( nextIndex == ( splideElms[0].length / splideElms[0].options.perPage ) ) {
+                nextBtn.classList.add('d-none');
+            } else if( nextIndex <= 0 ) { 
+                prevBtn.classList.add('d-none');
+            } else {
+                nextBtn.classList.remove('d-none');
+                prevBtn.classList.remove('d-none');
+            }
+        })
     });
 </script>

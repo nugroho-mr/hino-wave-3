@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/assets/vendor/boxicons/css/boxicons.min.css">
+        <link rel="stylesheet" href="/assets/vendor/autocomplete/css/autoComplete.css">
 </head>
 <body class="w3 auth dealer has-topbar">
     
@@ -60,7 +61,8 @@
             </div>
             <div class="col-12 col-sm-6 col-md-4">
                 <div class="form-group mb-0">
-                    <select class="form-control select-control">
+                    <input type="text" id="select-cities" class="form-control select-control" />
+                    <!--select class="form-control select-control" id="select-cities">
                         <option value="">-- Kota --</option>
                             <option value="Jakarta">Jakarta</option>
                             <option value="Jakarta Timur">Jakarta Timur</option>
@@ -234,7 +236,7 @@
                             <option value="Tebing Tinggi">Tebing Tinggi</option>
                             <option value="Bukittinggi">Bukittinggi</option>
                             <option value="Dharmasraya">Dharmasraya</option>
-                    </select>
+                    </select-->
                 </div>
             </div>
         </div>
@@ -3299,8 +3301,16 @@ Desa sembung Kec. Banyuputih - Semarang</li>
         ]
 
         const map = new google.maps.Map(document.getElementById("map"), {
-          center: { lat: -1.5300879, lng: 118.4787664 },
-          zoom: 4,
+          center: { lat: -6.242543, lng: 106.863696 },
+          zoom: 16,
+          restriction: {
+            latLngBounds: {                
+                north: 7.332038,
+                south: -12.895531,
+                east: 142.337897,
+                west: 92.036709
+            },
+          },
         });
         
 
@@ -3309,7 +3319,7 @@ Desa sembung Kec. Banyuputih - Semarang</li>
             str += '<img src="/assets/images/logo-heart-horizontal.svg" class="logo-heart-horizontal">'
             str += '<div class="marker-info bg-white rounded">'
             str += '<h6>' + marker.name + '</h6>'
-            str += '<ul class="bx-ul">'
+            str += '<ul class="bx-ul font-weight-bold">'
             str += '<li><i class="bx bx-buildings"></i>' + marker.address + '</li>'
             str += '<li><i class="bx bx-phone"></i>' + marker.phone + '</li>'
             str += '<li><i class="bx bx-printer"></i>' + marker.fax + '</li>'
@@ -3342,7 +3352,205 @@ Desa sembung Kec. Banyuputih - Semarang</li>
             return marker
         });
 
-        
+        const autoCompleteCities = new autoComplete({
+            data: {
+                src: [
+                        "Jakarta",
+                        "Jakarta Timur",
+                        "Sunter",
+                        "Aceh",
+                        "Medan Sisingamangaraja",
+                        "Medan",
+                        "Padang",
+                        "Pekanbaru",
+                        "Batam",
+                        "Palembang",
+                        "Jambi",
+                        "Bengkulu",
+                        "Simpang Randu",
+                        "Cikampek",
+                        "Cibitung",
+                        "Rancaekek",
+                        "Bandung",
+                        "Ungaran",
+                        "Semarang",
+                        "Solo",
+                        "Kletek Sidoarjo",
+                        "Denpasar",
+                        "Mataram",
+                        "Pontianak",
+                        "Sampit",
+                        "Banjarmasin",
+                        "Samarinda",
+                        "Manado",
+                        "Palu",
+                        "Makassar",
+                        "Kendari",
+                        "Ambon",
+                        "Sorong",
+                        "Balikpapan",
+                        "Tangerang",
+                        "Tanjung Pinang",
+                        "Nanggewer",
+                        "Ciputat",
+                        "Padang Sidempuan",
+                        "Rantauprapat",
+                        "Kertapati - Palembang",
+                        "Pangkalan Kerinci",
+                        "Duri",
+                        "Lahat",
+                        "Ogan Komering Ulu",
+                        "Pangkal Pinang",
+                        "Muara Bungo",
+                        "Ciawi",
+                        "Tulang Bawang",
+                        "Bandar Jaya",
+                        "Cirebon",
+                        "Cilegon",
+                        "Cikupa Tangerang",
+                        "Tasikmalaya",
+                        "Genuk - Semarang",
+                        "Tegal",
+                        "Cilacap",
+                        "Kudus",
+                        "Magelang",
+                        "Malang",
+                        "Sleman",
+                        "Purwokerto",
+                        "Jemursari Surabaya",
+                        "Banyuwangi",
+                        "Jember",
+                        "Tuban",
+                        "Ketapang",
+                        "Singkawang",
+                        "Pangkalan Bun",
+                        "Rantau",
+                        "Gorontalo",
+                        "Marisa",
+                        "Mamuju",
+                        "Luwuk",
+                        "Ternate",
+                        "BSD Serpong",
+                        "Solok",
+                        "Palopo",
+                        "Veteran",
+                        "Ringroad Medan",
+                        "Tanjung Pandan",
+                        "Bantul",
+                        "Karangasem",
+                        "Sumbawa",
+                        "Probolinggo",
+                        "Narogong",
+                        "Palangkaraya",
+                        "Kalianak",
+                        "Blitar",
+                        "Sragen",
+                        " Lhokseumawe",
+                        "Serang",
+                        "Pematang Siantar",
+                        "Mojokerto",
+                        "Bone",
+                        "Madiun",
+                        "Langkat",
+                        "Ujungbatu",
+                        "Lubuk Linggau",
+                        "Prabumulih",
+                        "Sarolangun",
+                        "Taman Palem",
+                        "Padalarang",
+                        " Garut",
+                        "Pekalongan",
+                        "Kediri",
+                        "Singaraja",
+                        "Ende",
+                        "Maumere",
+                        "Kupang",
+                        "Flores",
+                        "Sintang",
+                        "Sungai Danau",
+                        "Batulicin",
+                        "Citraland Manado",
+                        "Pare Pare",
+                        "Gowa",
+                        "Jayapura",
+                        "Kepahyang",
+                        "Sanggau",
+                        "Rengasdengklok",
+                        "Banjarnegara",
+                        "Payakumbuh",
+                        "Indragiri Hulu",
+                        "Depok",
+                        "Pantai Indah Kapuk",
+                        "Kelapa Gading",
+                        "Sidrap",
+                        "Betung",
+                        "Sekayu",
+                        "Citeureup",
+                        "Cikarang - Karawang Barat",
+                        "Kendal",
+                        "Cilincing",
+                        "Bulukumba",
+                        "Bau Bau",
+                        "PUSRI",
+                        "Kramatjati",
+                        "Bandung Rancaekek",
+                        "Cimahi",
+                        "Salatiga",
+                        "Kebumen",
+                        "Kota Mobagu",
+                        "Morowali",
+                        "Masohi",
+                        "Tobelo",
+                        "Manokwari",
+                        "Medan Lubuk Pakam",
+                        "Jatake",
+                        "Muara Wahau",
+                        "Balairiam",
+                        "Sambas",
+                        "Bangli",
+                        "Gresik",
+                        "Rembang",
+                        "Banyuputih Batang",
+                        "Muara Enim",
+                        "Rewulu",
+                        "Tirtonadi",
+                        "Boyolali",
+                        "Bima",
+                        "Balaraja",
+                        "Pasuruan",
+                        "Petung",
+                        "Klaten",
+                        "Saumlaki",
+                        "Natar Bandar Lampung",
+                        "OKI",
+                        "Berau",
+                        "Tebing Tinggi",
+                        "Bukittinggi",
+                        "Dharmasraya",
+                ],
+                cache: true,
+            },
+            placeHolder: '-- City --',
+            selector: '#select-cities',
+            searchEngine: 'loose',
+            noResults: (dataFeedback, generateList) => {
+                // Generate autoComplete List
+                generateList(autoCompleteCities, dataFeedback, dataFeedback.results);
+                // No Results List Item
+                const result = document.createElement("li");
+                result.setAttribute("class", "no_result py-3 px-3");
+                result.setAttribute("tabindex", "1");
+                result.innerHTML = `<h5 class="text-gray-400 font-weight-normal">Found No Results</h5>`;
+                document
+                    .querySelector(`#${autoCompleteCities.resultsList.idName}`)
+                    .appendChild(result);
+            },
+            onSelection: (feedback) => {
+                document.querySelector("#select-cities").blur();
+                document.querySelector("#select-cities").value = feedback.selection.value;
+                console.log(feedback);
+            }
+        });
     })
 </script>
 
@@ -3371,6 +3579,7 @@ Desa sembung Kec. Banyuputih - Semarang</li>
 </div>
 
     <script src="/assets/vendor/boxicons/js/boxicons.js"></script>
+        <script src="/assets/vendor/autocomplete/js/autoComplete.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded',() => {
             document.querySelectorAll('.card--accordion .card-header').forEach(item => {

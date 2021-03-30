@@ -1,4 +1,9 @@
 &.product-comparison {
+    .grid--product-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: $spacer * 1.5;
+    }
     #section__komparasi-hino-info {
         height: calc( 100vh - #{$spacer * 3.5} );
         overflow-y: scroll;
@@ -36,6 +41,30 @@
             padding: 5px 3px;
             border-radius: $border-radius-sm;
             width: 100%;
+        }
+        .komparasi__prev {
+            top: 50%;
+            border: 0;
+            background: $hino-red;
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            color: $white;
+            left: 10px;
+            line-height: 62px;
+            text-align: center;
+        }
+        .komparasi__next {
+            border: 0;
+            top: 50%;
+            background: $hino-red;
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            color: $white;
+            right: 10px;
+            line-height: 62px;
+            text-align: center;
         }
     }
     &.product-comparison-result {
