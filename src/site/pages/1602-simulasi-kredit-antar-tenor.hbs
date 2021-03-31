@@ -1,0 +1,52 @@
+---
+layout: 'layouts/authenticated'
+title: 'Simulasi Kredit Antar Tenor'
+order: 1602
+status: 'completed'
+body_classes: 'auth simulasi-kredit simulasi-kredit-tenor'
+topbar: true
+topbar_title: 'Simulasi Kredit'
+---
+
+<section id="section__simulasi-kredit" class="py-8">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h5 class="text-dark mb-8 text-uppercase">Simulasi Kredit Antar Tenor</h5>
+                <div class="info-container">
+                    <div class="grid grid--leasing-form">
+                        {{> partials/form-field title="Customer" field_name="customer" type="text" value="PT Unotek" alt_form=true }}
+                        {{#>partials/form-field title="Tipe Kendaraan" field_name="tipe_kendaraan" type="select" }}
+                            <option value="">Tipe Kendaraan</option>
+                            <option value="Tipe Kendaraan 1">Tipe Kendaraan 1</option>
+                            <option value="Tipe Kendaraan 2">Tipe Kendaraan 2</option>
+                        {{/partials/form-field}}
+                        {{#>partials/form-field title="Leasing" field_name="leasing" type="select" }}
+                            <option value="Leasing 1">Leasing 1</option>
+                            <option value="Leasing 2">Leasing 2</option>
+                            <option value="Leasing 3">Leasing 3</option>
+                        {{/partials/form-field}}
+                        
+                        {{#>partials/form-field title="Tenor" field_name="tenor_1" type="select" }}
+                            <option value="">Tahun</option>
+                            <option value="1">1 Tahun</option>
+                            <option value="2">2 Tahun</option>
+                            <option value="3">3 Tahun</option>
+                            <option value="4">4 Tahun</option>
+                            <option value="5">5 Tahun</option>
+                        {{/partials/form-field}}
+                        {{#>partials/form-field title="" field_name="tenor_2" type="select" }}
+                            <option value="">Tahun</option>
+                            <option value="1">1 Tahun</option>
+                            <option value="2">2 Tahun</option>
+                            <option value="3">3 Tahun</option>
+                            <option value="4">4 Tahun</option>
+                            <option value="5">5 Tahun</option>
+                        {{/partials/form-field}}
+                    </div>
+                </div>
+                <button class="btn btn-dark rounded-pill btn-block font-weight-bold">Apply</button>
+            </div>
+        </div>
+    </div>
+</section>

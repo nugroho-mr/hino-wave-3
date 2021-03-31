@@ -18,7 +18,7 @@
             <div class="row text-white">
                 <div class="col-auto col-left d-flex align-items-center">
                     <button><box-icon name="left-arrow-alt" color="#ffffff"></box-icon></button>
-                    <h5 class="ml-1 mb-0">Komparasi</h5>
+                    <h5 class="ml-1 mb-0">Perbandingan Produk</h5>
                 </div>
                 <div class="col col-right">
 
@@ -32,6 +32,18 @@
     <div class="container">
         <div class="row">
             <div class="col-12 mb-6">
+                <div class="card search-box komparasi-produk--search-box mb-8">
+                    <div class="card-body py-0">
+                        <div class="d-flex align-items-center">
+                            <div class="col p-0">
+                                <input type="text" class="search-box" placeholder="Cari" >
+                            </div>
+                            <div class="col-auto p-0">
+                                <box-icon name="search" size="24px" color="#cccccc" class="d-block"></box-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="row justify-content-between align-items-center">
                     <div class="col-auto">
                         <h5 class="text-dark text-uppercase m-0">Kategori Truk</h5>
@@ -107,11 +119,14 @@
 <!-- Popup notifikasi -->
 <!-------
 <div id="popup--notif" class="popup-overlay">
-    <div class="popup rounded p-5">
-        <h5 class="form-warning text-danger text-center font-weight-normal m-0">Produk harus lebih dari satu</h5>
+    <div class="popup rounded">
+        <div class="header"><button class="btn-close "><box-icon name="x"></box-icon></button></div>
+        <div class="px-8 pb-8">
+            <h5 class="form-warning text-danger text-center font-weight-normal m-0">Produk harus lebih dari satu</h5>
+        </div>
     </div>
 </div>
---------->
+<!----------->
 
 <div class="footer-spacer"></div>
 <div id="floating-footer-menu">

@@ -1,0 +1,338 @@
+---
+layout: 'layouts/authenticated'
+title: 'Simulasi Kredit Antar Tenor - Result'
+order: 1604
+status: 'completed'
+body_classes: 'auth simulasi-kredit simulasi-kredit-result'
+topbar: true
+topbar_title: 'Simulasi Kredit'
+---
+
+<section id="section__simulasi-kredit-result" class="py-8">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h5 class="text-dark mb-8 text-uppercase">Simulasi Kredit Antar Tenor</h5>
+                <div class="info-container">
+                    <div class="grid grid--leasing-form">
+                        {{> partials/form-field title="Customer" field_name="customer" type="text" value="PT Unotek" }}
+                        {{#>partials/form-field title="Tipe Kendaraan" field_name="tipe_kendaraan" type="select" }}
+                            <option value="">Tipe Kendaraan</option>
+                            <option value="Tipe Kendaraan 1">Tipe Kendaraan 1</option>
+                            <option value="Tipe Kendaraan 2">Tipe Kendaraan 2</option>
+                        {{/partials/form-field}}
+                        <div class="row">
+                            <div class="col-12"><p>Leasing</p></div>
+                            <div class="col-6">
+                                {{#>partials/form-field field_name="leasing_1" type="select" remove_label=true }}
+                                    <option value="Leasing 1">Leasing 1</option>
+                                    <option value="Leasing 2">Leasing 2</option>
+                                    <option value="Leasing 3">Leasing 3</option>
+                                {{/partials/form-field}}
+                            </div>
+                            <div class="col-6">
+                                {{#>partials/form-field field_name="leasing_1" type="select" remove_label=true }}
+                                    <option value="Leasing 1">Leasing 1</option>
+                                    <option value="Leasing 2">Leasing 2</option>
+                                    <option value="Leasing 3">Leasing 3</option>
+                                {{/partials/form-field}}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12"><p>Tenor Name</p></div>
+                            <div class="col-6">
+                                {{#>partials/form-field field_name="tenor_name_1" type="select" remove_label=true }}
+                                    <option value="Tenor 1 Tahun">Tenor 1 Tahun</option>
+                                    <option value="Tenor 2 Tahun">Tenor 2 Tahun</option>
+                                    <option value="Tenor 3 Tahun">Tenor 3 Tahun</option>
+                                    <option value="Tenor 4 Tahun" selected>Tenor 4 Tahun</option>
+                                    <option value="Tenor 5 Tahun">Tenor 5 Tahun</option>
+                                {{/partials/form-field}}
+                            </div>
+                            <div class="col-6">
+                                {{#>partials/form-field field_name="tenor_name_2" type="select" remove_label=true }}
+                                    <option value="Tenor 1 Tahun">Tenor 1 Tahun</option>
+                                    <option value="Tenor 2 Tahun">Tenor 2 Tahun</option>
+                                    <option value="Tenor 3 Tahun">Tenor 3 Tahun</option>
+                                    <option value="Tenor 4 Tahun" selected>Tenor 4 Tahun</option>
+                                    <option value="Tenor 5 Tahun">Tenor 5 Tahun</option>
+                                {{/partials/form-field}}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12"><p>Tenor</p></div>
+                            <div class="col-6">
+                                {{#>partials/form-field field_name="tenor_1" type="select" remove_label=true }}
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4" selected>4</option>
+                                    <option value="5n">5</option>
+                                {{/partials/form-field}}
+                            </div>
+                            <div class="col-6">
+                                {{#>partials/form-field field_name="tenor_2" type="select" remove_label=true }}
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4" selected>4</option>
+                                    <option value="5n">5</option>
+                                {{/partials/form-field}}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12"><p>Tipe</p></div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="tipe_1" type="text" value="ADDM" alt_form=true remove_label=true }}
+                            </div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="tipe_2" type="text" value="ADDM" alt_form=true remove_label=true }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12"><p>Bulan</p></div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="bulan_1" type="text" value="47" remove_label=true }}
+                            </div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="bulan_2" type="text" value="47" remove_label=true }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12"><p>Harga Karoseri</p></div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="harga_karoseri_1" type="text" value="Rp. 30.000.000" remove_label=true }}
+                            </div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="harga_karoseri_2"  type="text" value="Rp. 30.000.000" remove_label=true }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12"><p>Harga OTR / OTR Price</p></div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="harga_otr_1" type="text" value="Rp 287.950.000" alt_form=true remove_label=true }}
+                            </div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="harga_otr_2" type="text" value="Rp 287.950.000" alt_form=true remove_label=true }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12"><p>Asuransi (TLO) / Insurance TLO</p></div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="asuransi_tlo_1" type="text" value="Rp. - " remove_label=true }}
+                            </div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="asuransi_tlo_2" type="text" value="Rp. - " remove_label=true }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12"><p>Tahun 1</p></div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="tahun_1_1" type="text" value="Rp. 1.842.880 " remove_label=true }}
+                            </div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="tahun_1_2" type="text" value="Rp. 1.842.880 " remove_label=true }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12"><p>Tahun 2</p></div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="tahun_2_1" type="text" value="Rp. 1.554.930 " remove_label=true }}
+                            </div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="tahun_2_2" type="text" value="Rp. 1.554.930 " remove_label=true }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12"><p>Tahun 3</p></div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="tahun_3_1" type="text" value="Rp. 1.382.160 " remove_label=true }}
+                            </div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="tahun_3_2" type="text" value="Rp. 1.382.160 " remove_label=true }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12"><p>Tahun 4</p></div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="tahun_4_1" type="text" value="Rp. 1.123.005 " remove_label=true }}
+                            </div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="tahun_4_2" type="text" value="Rp. 1.123.005 " remove_label=true }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12"><p>Tahun 5</p></div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="tahun_5_1" type="text" value="Rp. - " remove_label=true }}
+                            </div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="tahun_5_2" type="text" value="Rp. - " remove_label=true }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12"><p>Uang Muka / DP</p></div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="uang_muka_1" type="text" value="20%" remove_label=true alt_form=true }}
+                            </div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="uang_muka_2" type="text" value="20%" remove_label=true alt_form=true }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12"><p>PH Total / Total Principal</p></div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="ph_total_1" type="text" value="Rp 230.360.000" remove_label=true }}                                
+                            </div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="ph_total_2" type="text" value="Rp 230.360.000" remove_label=true }}                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12"><p>Bunga Jual (Efektif) / Effective Rate</p></div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="bunga_jual_efektif_1" type="text" value="17%" remove_label=true alt_form=true }}                                
+                            </div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="bunga_jual_efektif_2" type="text" value="14%" remove_label=true alt_form=true }}                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12"><p>Bunga Jual (Flat) / Flat Rate</p></div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="bunga_jual_flat_1" type="text" value="9,14%" remove_label=true }}                                
+                            </div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="bunga_jual_flat_2" type="text" value="9,14%" remove_label=true }}                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12"><p>Subsidi Bunga / Rate Subsidy</p></div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="subsidi_bunga_1" type="text" value="Rp 10.000.000" remove_label=true alt_form=true }}                                
+                            </div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="subsidi_bunga_2" type="text" value="Rp 10.000.000" remove_label=true alt_form=true }}                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12"><p>Angsuran / Bulan</p></div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="angsuran_bulan_1" type="text" value="Rp 6.345.500" remove_label=true }}                                
+                            </div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="angsuran_bulan_2" type="text" value="Rp 6.345.500" remove_label=true }}                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12"><p>Uang Muka</p></div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="uang_muka_1" type="text" value="Rp 57.590.000" remove_label=true }}                                
+                            </div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="uang_muka_2" type="text" value="Rp 57.590.000" remove_label=true }}                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12"><p>Biaya Administrasi / Admin Fee</p></div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="biaya_admin_1" type="text" value="Rp 2.000.000" remove_label=true alt_form=true }}                                
+                            </div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="biaya_admin_2" type="text" value="Rp 2.000.000" remove_label=true alt_form=true }}                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12"><p>Provisi</p></div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="provisi_1" type="text" value="Rp -" remove_label=true }}                                
+                            </div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="provisi_2" type="text" value="Rp -" remove_label=true }}                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12"><p>Asuransi Tunai / Cash Insurance</p></div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="asuransi_tunai_1" type="text" value="Rp 5.590.000" remove_label=true }}                                
+                            </div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="asuransi_tunai_2" type="text" value="Rp 5.590.000" remove_label=true }}                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12"><p>Angsuran Pertama / First Installment</p></div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="angsuran_pertama_1" type="text" value="Rp 6.345.500" remove_label=true }}                                
+                            </div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="angsuran_pertama_2" type="text" value="Rp 6.345.500" remove_label=true }}                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12"><p>Pembayaran I / First Payment</p></div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="pembayaran_pertama_1" type="text" value="Rp 71.838.475" remove_label=true }}                                
+                            </div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="pembayaran_pertama_2" type="text" value="Rp 6.345.500" remove_label=true }}                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12"><p>Subsidi Uang Muka / DP Subsidy</p></div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="subsidi_uang_muka_1" type="text" value="Rp -" remove_label=true }}                                
+                            </div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="subsidi_uang_muka_2" type="text" value="Rp -" remove_label=true }}                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12"><p>Total Pembayaran I / First Payment</p></div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="total_pembayaran_pertama_1" type="text" value="Rp 71.838.475" remove_label=true }}                                
+                            </div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="total_pembayaran_pertama_2" type="text" value="Rp 71.838.475" remove_label=true }}                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12"><p>Pelunasan ke Dealer</p></div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="pelunasan_dealer_1" type="text" value="Rp 216.111.525" remove_label=true }}                                
+                            </div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="pelunasan_dealer_2" type="text" value="Rp 216.111.525" remove_label=true }}                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12"><p>Total Bayar Customer</p></div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="total_bayar_customer_1" type="text" value="Rp 370.076.975" remove_label=true }}                                
+                            </div>
+                            <div class="col-6">
+                                {{> partials/form-field field_name="total_bayar_customer_2" type="text" value="Rp 370.076.975" remove_label=true }}                                
+                            </div>
+                        </div>
+                        <div class="row justify-content-md-end">
+                            <div class="col-12 col-md">
+                                <div class="d-flex justify-content-between justify-content-md-end">
+                                    <div class="mr-2 flex-grow-1 flex-md-grow-0">
+                                        <a class="btn btn-hino-primary text-white w-100 py-2" href="#">
+                                            <i class="bx bx-download"></i>&nbsp;&nbsp;Simpan Simulasi
+                                        </a>
+                                    </div>
+                                    <div class="ml-2 flex-grow-1 flex-md-grow-0">
+                                        <a class="btn btn-hino-red w-100 py-2" href="#">
+                                            <i class="bx bx-share-alt"></i>&nbsp;&nbsp;Bagikan Simulasi
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
