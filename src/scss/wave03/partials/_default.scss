@@ -184,7 +184,6 @@ html & {
 }
 
 .btn {
-    outline: none;
     .bx {
         font-size: unset;
     }
@@ -197,9 +196,6 @@ html & {
             transform: translateY(-50%);
             font-size: 1.3em;
         }
-    }
-    &:focus {
-        outline:none !important;
     }
 }
 
@@ -263,5 +259,12 @@ html & {
                 }
             }
         }
+    }
+}
+
+button {
+    outline: none !important;
+    &:focus {
+        outline: none !important;
     }
 }
