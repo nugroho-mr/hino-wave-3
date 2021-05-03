@@ -184,6 +184,7 @@ html & {
 }
 
 .btn {
+    outline: none;
     .bx {
         font-size: unset;
     }
@@ -197,7 +198,12 @@ html & {
             font-size: 1.3em;
         }
     }
+    &:focus {
+        outline:none !important;
+    }
 }
+
+
 
 .form-group {
     &.form-group--alt {
