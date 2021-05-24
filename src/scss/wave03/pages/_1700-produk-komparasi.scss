@@ -43,7 +43,7 @@
             width: 100%;
         }
         .komparasi__prev {
-            top: 50%;
+            bottom: calc( calc( 100vh - 260px ) / 2 );
             border: 0;
             background: $hino-red;
             width: 50px;
@@ -56,7 +56,7 @@
         }
         .komparasi__next {
             border: 0;
-            top: 50%;
+            bottom: calc( calc( 100vh - 260px ) / 2 );
             background: $hino-red;
             width: 50px;
             height: 50px;
